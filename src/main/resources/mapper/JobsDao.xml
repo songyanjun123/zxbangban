@@ -1,0 +1,12 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zxbangban.dao.JobsDao">
+    <select id="getJobs" resultType="Jobs">
+      SELECT * FROM jobs
+    </select>
+
+    <insert id="addJob" parameterType="Jobs">
+      INSERT  INTO jobs (name,des,create_time) VALUES (#{job.name},#{job.des},#{job.createTime})
+    </insert>
+</mapper>

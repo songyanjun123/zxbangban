@@ -1,0 +1,45 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zxbangban.dao.CustomerDao">
+    <insert id="newCustomer" parameterType="Customer">
+        INSERT INTO customer
+        (name, telphone, program_address, create_time, notes)
+        VALUES (#{customer.name}, #{customer.telphone}, #{customer.programAddress}, #{customer.createTime},
+                #{customer.notes})
+    </insert>
+
+    <select id="queryAll" resultType="Customer">
+        SELECT
+            `id`,
+            name,
+            program_address,
+            telphone,
+            priority,
+            create_time,
+            notes
+        FROM customer
+        ORDER BY create_time DESC
+    </select>
+
+    <select id="queryByTel" resultType="Customer">
+        SELECT
+            id,
+            name,
+            program_address,
+            priority,
+            create_time,
+            notes
+        FROM customer
+        WHERE telphone = #{tel}
+        ORDER BY create_time DESC
+        LIMIT 3
+    </select>
+
+    <delete id="delete" parameterType="long">
+        DELETE FROM customer
+        WHERE id = #{id}
+    </delete>
+
+
+</mapper>

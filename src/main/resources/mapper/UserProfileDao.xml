@@ -1,0 +1,10 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zxbangban.dao.UserProfileDao">
+
+    <select id="queryUserProfileByUID" parameterType="long" resultType="UserProfile">
+        SELECT id,user_id,name FROM  user_profile
+        WHERE user_id = #{userId}
+    </select>
+</mapper>

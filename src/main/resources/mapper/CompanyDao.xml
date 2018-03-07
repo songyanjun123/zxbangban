@@ -1,0 +1,23 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zxbangban.dao.CompanyDao">
+    <insert id="newCompany" parameterType="Company">
+        INSERT INTO company
+        (cid,cname,curl,ctype)
+        VALUES (#{company.cid}, #{company.cname}, #{company.curl},#{company.ctype})
+    </insert>
+
+    <select id="queryAllByCtype" resultType="Company" parameterType="int">
+        SELECT
+        cid,cname,curl
+        FROM company  where ctype=#{ctype}  limit  5
+    </select>
+
+    <delete id="delete" parameterType="long">
+        DELETE FROM company
+        WHERE id = #{id}
+    </delete>
+
+
+</mapper>

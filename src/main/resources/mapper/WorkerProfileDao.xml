@@ -1,0 +1,78 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zxbangban.dao.WorkerProfileDao">
+    <insert id="newWorkerProfile" parameterType="WorkerProfile">
+        INSERT INTO worker_profile (workerid, age, deposit, star_Evaluated)
+        VALUES
+            (#{workerProfile.workerid}, #{workerProfile.age}, #{workerProfile.deposit}, #{workerProfile.starEvaluated})
+    </insert>
+
+    <select id="queryByWorkerId" resultType="WorkerProfile" parameterType="long">
+        SELECT
+            workerid,
+            age,
+            deposit,
+            star_Evaluated,
+            weighted,
+            home_PV
+        FROM worker_profile
+        WHERE workerid = #{workerid}
+    </select>
+
+    <select id="queryViewByWorkerId" resultType="Integer">
+        SELECT home_PV
+        FROM worker_profile
+        WHERE workerid = #{workerid};
+    </select>
+
+    <update id="updateView">
+        UPDATE worker_profile
+        SET home_PV = #{count}
+        WHERE workerid = #{workerid}
+    </update>
+
+    <insert id="updateNewView" parameterType="WorkerProfile">
+        INSERT INTO worker_profile (workerid, home_PV)
+        VALUES (#{workerProfile.workerid}, #{workerProfile.homePV})
+    </insert>
+
+    <select id="queryDetailByWorkerId" resultType="WorkerProfile" parameterType="long">
+        SELECT
+            `age`,
+            `deposit`,
+            `star_Evaluated`,
+            `weighted`,
+            `home_PV`
+        FROM `worker_profile`
+        WHERE `workerid` = #{workerid};
+    </select>
+
+    <update id="editDeposit">
+        UPDATE worker_profile
+        SET `deposit` = #{deposit}
+        WHERE workerid = #{workerid}
+    </update>
+
+    <select id="queryStarEvaluatedByWorkerId" resultType="Short">
+        SELECT `star_Evaluated`
+        FROM `worker_profile`
+        WHERE `workerid` = #{workerid}
+    </select>
+
+    <select id="queryWeightedByWorkerId" resultType="Double">
+        SELECT `weighted`
+        FROM `worker_profile`
+        WHERE `workerid` = #{workerid}
+    </select>
+
+    <update id="updateWeightedByWorkerId">
+        UPDATE worker_profile
+        SET `weighted` = #{weighted}
+        WHERE `workerid` = #{workerid}
+    </update>
+
+    <delete id="deleteWorkerProfile" parameterType="long">
+        DELETE FROM worker_profile WHERE workerid = #{workerid}
+    </delete>
+</mapper>

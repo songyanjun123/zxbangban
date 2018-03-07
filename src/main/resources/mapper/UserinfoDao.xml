@@ -1,0 +1,63 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zxbangban.dao.UserInfoDao">
+    <insert id="newWorkerInfo" parameterType="UserInfo">
+        INSERT INTO userinfo
+          (username,password,telphone,create_time)
+        VALUES (#{userInfo.username},#{userInfo.password},#{userInfo.telphone},#{userInfo.createTime})
+    </insert>
+    <insert id="newUserInfo" parameterType="UserInfo">
+        INSERT INTO userinfo
+        (username,password,telphone,create_time,head_img_url,unionId)
+        VALUES (#{userInfo.username},#{userInfo.password},#{userInfo.telphone},#{userInfo.createTime},#{userInfo.headImgUrl},#{userInfo.unionId})
+    </insert>
+    <select id="queryByUsername" parameterType="String" resultType="UserInfo">
+        SELECT user_id,telphone,username,password,role_id,authen,head_img_url,member_level
+        FROM userinfo WHERE username = #{username}
+    </select>
+
+    <select id="queryTelByUsername" parameterType="String" resultType="String">
+        SELECT telphone
+        FROM userinfo WHERE username = #{username}
+    </select>
+
+    <update id="updatePassword" parameterType="String">
+        UPDATE userinfo
+        SET password = #{password}
+        WHERE username = #{username}
+    </update>
+    <update id="updateUnionId" parameterType="String">
+        UPDATE userinfo
+        SET unionId = #{unionid}
+        WHERE telphone = #{telphone}
+    </update>
+
+    <select id="queryByRoleId" parameterType="Integer" resultType="UserInfo">
+        SELECT user_id,telphone,username,role_id
+        FROM userinfo WHERE role_id = #{roleId}
+    </select>
+
+    <select id="queryByUnionId" parameterType="String" resultType="UserInfo">
+        SELECT username,head_img_url
+        FROM userinfo WHERE unionId= #{unionId}
+    </select>
+
+    <select id="queryByTelphone" parameterType="String" resultType="UserInfo">
+         SELECT user_id,telphone,username,password,role_id,authen,head_img_url,member_level
+        FROM userinfo WHERE telphone = #{telphone}
+    </select>
+
+    <insert id="saveUserInfo" parameterType="UserInfo">
+        INSERT INTO userinfo
+        (telphone,unionid,headimg)
+        VALUES (#{userInfo.telphone},#{userInfo.unionid},#{userInfo.headImgUrl})
+    </insert>
+
+    <insert id="saveUnameAndPassword" parameterType="UserInfo">
+         INSERT INTO userinfo
+          (username,password,telphone,create_time)
+        VALUES (#{userInfo.username},#{userInfo.password},#{userInfo.createTime})
+    </insert>
+
+</mapper>

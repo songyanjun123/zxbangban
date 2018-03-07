@@ -1,0 +1,337 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zxbangban.dao.WorkerInfoDao">
+
+    <select id="showAllWorkersByJobId" resultType="WorkerInfo" parameterType="Integer">
+        SELECT
+        w.workerId,
+        w.name,
+        w.head_img_url,
+        w.state,
+        w.authenticated,
+        w.certificated,
+        w.pr,
+        w.over_all_rating,
+        w.location
+        FROM workerinfo AS w
+        WHERE  w.job_id = #{jobId} AND w.is_show = TRUE
+        ORDER BY over_all_rating DESC ,create_time ASC;
+    </select>
+
+    <select id="showWorkersByJobId" resultType="WorkerInfo" parameterType="WorkerDetail">
+        SELECT
+        w.workerId,
+        w.name,
+        w.head_img_url,
+        w.state,
+        w.authenticated,
+        w.certificated,
+        w.pr,
+        w.over_all_rating,
+        w.location
+        FROM workerinfo AS w
+        WHERE w.location = #{workerInfo.location} AND w.job_id = #{workerInfo.jobId} AND w.is_show = TRUE
+        ORDER BY over_all_rating DESC ,create_time ASC;
+    </select>
+
+    <select id="showWorkers" resultType="WorkerInfo" parameterType="WorkerDetail">
+        SELECT
+        w.workerId,
+        w.name,
+        w.head_img_url,
+        w.state,
+        w.authenticated,
+        w.certificated,
+        w.pr,
+        w.over_all_rating,
+        w.location
+        FROM workerinfo AS w
+        WHERE w.location = #{workerInfo.location} AND w.job_id = #{workerInfo.jobId} AND w.is_show = TRUE
+        ORDER BY over_all_rating DESC ,create_time ASC limit #{workerInfo.workerId};
+    </select>
+
+    <select id="queryWorkerByWorkerId" resultType="WorkerInfo" parameterType="long">
+        SELECT
+        w.workerId,
+        w.name,
+        w.head_img_url,
+        w.job_id,
+        w.pr,
+        w.tel,
+        w.state,
+        w.project_des,
+        w.authenticated,
+        w.certificated,
+        w.location,
+        w.over_all_rating
+        FROM workerinfo AS w
+        WHERE w.workerId = #{workerid}
+    </select>
+
+    <select id="queryTelByWorkerId" resultType="String" parameterType="long">
+        SELECT tel
+        FROM workerinfo
+        WHERE workerId = #{workerid}
+    </select>
+
+    <insert id="newWorkerInfo" parameterType="WorkerInfo">
+        INSERT INTO workerinfo (name, tel, job_id, referer_tel,create_time,location)
+        VALUES (#{workerInfo.name}, #{workerInfo.tel}, #{workerInfo.jobId}, #{workerInfo.refererTel},#{workerInfo.createTime},#{workerInfo.location});
+    </insert>
+
+    <select id="queryNew" resultType="WorkerInfo">
+        SELECT
+        w.workerId,
+        w.name,
+        w.head_img_url,
+        w.job_id,
+        w.pr,
+        w.authenticated,
+        w.certificated,
+        w.location,
+        w.create_time,
+        w.tel
+        FROM workerinfo AS w
+        ORDER BY w.create_time DESC
+        LIMIT 3
+    </select>
+
+    <select id="queryAll" resultType="Worker">
+        SELECT
+        w.workerId as id,
+        w.name,
+        w.head_img_url,
+        j.des as job,
+        w.pr,
+        w.authenticated,
+        w.certificated,
+        w.location,
+        w.state,
+        w.create_time,
+        w.tel as telPhone,
+        w.is_show
+        FROM workerinfo AS w INNER JOIN jobs as j WHERE w.job_id = j.id
+        ORDER BY w.create_time DESC
+    </select>
+
+    <select id="queryByJobId" resultType="Worker">
+        SELECT
+        w.workerId as id,
+        w.name,
+        w.head_img_url,
+        j.des AS job,
+        w.pr,
+        w.authenticated,
+        w.certificated,
+        w.state,
+        w.create_time,
+        w.tel as telPhone,
+        w.is_show
+        FROM workerinfo AS w INNER JOIN jobs as j WHERE w.job_id = j.id and w.job_id = #{jobId}
+        ORDER BY w.create_time DESC
+    </select>
+
+    <select id="queryByJobName" resultType="Worker">
+        SELECT
+        w.workerId as id,
+        w.name,
+        w.head_img_url,
+        j.des AS job,
+        w.pr,
+        w.authenticated,
+        w.certificated,
+        w.state,
+        w.create_time,
+        w.tel as telPhone,
+        w.is_show
+        FROM workerinfo AS w INNER JOIN jobs as j WHERE w.job_id = j.id and j.name = #{jobName}
+        ORDER BY w.create_time DESC
+    </select>
+
+    <select id="countWorkers" resultType="int">
+        SELECT  COUNT(*) FROM workerinfo
+    </select>
+
+    <select id="countWorkersByJoBId" resultType="int">
+        SELECT  COUNT(*) FROM workerinfo WHERE job_id = #{jobId}
+    </select>
+
+    <select id="countWorkersByJobName" resultType="int">
+        SELECT count(*) FROM
+        workerinfo as w
+        INNER JOIN
+        jobs as j WHERE w.job_id = j.id
+        and
+        j.name = #{jobName}
+    </select>
+
+    <select id="queryDetailByWorkerId" resultType="WorkerInfo" parameterType="long">
+        SELECT
+        w.workerId,
+        w.name,
+        w.head_img_url,
+        w.`tel`,
+        w.`job_id`,
+        w.`address`,
+        w.`location`,
+        w.`project_des`,
+        w.`project_img_url`,
+        w.`state`,
+        w.`authenticated`,
+        w.`certificated`,
+        w.`pr`,
+        w.`referer_tel`,
+        w.`is_show`,
+        w.`over_all_rating`,
+        w.`create_time`
+        FROM `workerinfo` w
+        WHERE `workerId` = #{workerid};
+    </select>
+
+    <update id="updateIsShow" parameterType="long">
+        UPDATE workerinfo
+        SET `is_show` = TRUE
+        WHERE workerId = #{workerid}
+    </update>
+
+    <update id="updateIsNotShow" parameterType="long">
+        UPDATE workerinfo
+        SET `is_show` = FALSE
+        WHERE workerId = #{workerid}
+    </update>
+
+    <update id="editName">
+        UPDATE workerinfo
+        SET `name` = #{name}
+        WHERE `workerId` = #{workerid}
+    </update>
+
+    <update id="editAuth">
+        UPDATE workerinfo
+        SET `authenticated` = #{auth}
+        WHERE `workerId` = #{workerid}
+    </update>
+
+    <update id="editCert">
+        UPDATE workerinfo
+        SET `certificated` = #{cert}
+        WHERE `workerId` = #{workerid}
+    </update>
+
+    <update id="editheadimg">
+        UPDATE workerinfo
+        SET `head_img_url` = #{headimgurl}
+        WHERE `workerId` = #{workerid}
+    </update>
+
+    <update id="editPR">
+        UPDATE workerinfo
+        SET `pr` = #{pr}
+        WHERE `workerId` = #{workerid}
+    </update>
+
+    <select id="queryPRByWorkerId" resultType="Boolean">
+        SELECT `pr`
+        FROM workerinfo
+        WHERE `workerId` = #{workerid}
+    </select>
+
+    <update id="updateOARating">
+        UPDATE workerinfo
+        SET `over_all_rating` = #{oarating}
+        WHERE `workerId` = #{workerid}
+    </update>
+
+    <update id="editLocation">
+        UPDATE workerinfo
+        SET `location` = #{location}
+        WHERE `workerId` = #{workerid}
+    </update>
+
+    <update id="editAddress">
+        UPDATE workerinfo
+        SET `address` = #{address}
+        WHERE `workerId` = #{workerid}
+    </update>
+
+    <update id="saveDes" parameterType="WorkerInfo">
+        UPDATE workerinfo
+        SET `project_des` = #{projectDes}
+        WHERE `workerId` = #{workerid}
+    </update>
+
+    <update id="editProjectImg">
+        UPDATE workerinfo
+        SET `project_img_url` = #{projectImg}
+        WHERE `workerId` = #{workerid}
+    </update>
+
+    <select id="queryProjectImgByWorkerId" parameterType="long" resultType="String">
+        SELECT `project_img_url`
+        FROM workerinfo
+        WHERE `workerId` = #{workerid}
+    </select>
+
+    <select id="queryDetailByTelPhone" parameterType="String" resultType="WorkerInfo">
+        SELECT `workerId`,`name`,`job_id`,`head_img_url`,`project_des`,`project_img_url`,`location`,`state`,`authenticated`,`certificated`
+        FROM workerinfo
+        WHERE `tel` = #{telphone}
+    </select>
+
+
+
+    <update id="changeStateTrue" parameterType="long">
+        UPDATE workerinfo SET state = TRUE WHERE `workerId` = #{workerid}
+    </update>
+
+    <update id="changeStateFalse" parameterType="long">
+        UPDATE workerinfo SET state = FALSE WHERE `workerId` = #{workerid}
+    </update>
+
+    <delete id="deleteWorkerInfo" parameterType="long">
+        DELETE FROM workerinfo WHERE workerId = #{workerid}
+    </delete>
+
+
+    <select id="queryOARatingByWorkerId" parameterType="long" resultType="Double">
+        SELECT over_all_rating FROM workerinfo WHERE workerId = #{workerid}
+    </select>
+
+    <select id="queryByTel" parameterType="String" resultType="WorkerInfo">
+        SELECT `workerId`,`name`,`state`
+        FROM workerinfo
+        WHERE `tel` = #{tel}
+    </select>
+
+    <update id="updateWorkerState">
+        UPDATE workerinfo
+        SET `state` = #{state}
+        WHERE `workerId` = #{workerId}
+    </update>
+
+
+    <update id="updateProjectImg">
+        UPDATE workerinfo
+        SET `project_img_url` = #{project_img_url}
+        WHERE `workerId` = #{workerid}
+    </update>
+
+    <select id="queryProvinceAll" resultType="Province">
+        SELECT  id,code,name
+        FROM address_province
+    </select>
+
+    <select id="queryCityByProvinceCode" resultType="City">
+        SELECT  id,code,name
+        FROM address_city
+        WHERE provinceCode = #{provinceCode}
+    </select>
+
+    <select id="queryTownByCityCode" resultType="City">
+        SELECT  id,code,name
+        FROM address_town
+        WHERE cityCode = #{cityCode}
+    </select>
+
+</mapper>
