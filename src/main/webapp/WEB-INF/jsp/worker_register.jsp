@@ -55,13 +55,17 @@
                             <div class="input-group input-group-lg" style="margin-bottom: 20px">
                                 <input type="text" class="form-control" placeholder="请输入手机验证码" name="telcode">
                                 <span class="input-group-btn">
-                            <button class="btn btn-primary" type="button" id="codebtn">验证码</button>
-                        </span>
+                                    <button class="btn btn-primary" type="button" id="codebtn">验证码</button>
+                                </span>
+                            </div>
+                            <div id="loc" class="input-group input-group-lg" style="margin-bottom: 20px">
+                                <span class="input-group-addon">工作地址：</span>
+                                <input type="text" id="loction"  class="form-control" placeholder="请输入地址" name="location" onmouseup="getChangeCity()">
                             </div>
                             <div class="input-group input-group-lg" style="margin-bottom: 20px">
-                        <span class="input-group-btn">
-                            <button type="submit" class="btn btn-success btn-block">提交申请</button>
-                        </span>
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-success btn-block">提交申请</button>
+                                </span>
                             </div>
                         </form>
                     </div>
@@ -78,6 +82,9 @@
     $(function () {
         workerregister.detail.init();
     });
-
+    function getChangeCity() {
+        var loc=$("#city").text();
+        $("input[name='location']").val(loc.toString());
+    }
 </script>
 </html>

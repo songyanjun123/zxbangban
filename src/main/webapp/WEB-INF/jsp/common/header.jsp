@@ -40,7 +40,7 @@
 				<div class="address">
 					<div class="change_city">
 						<em></em>
-						<span id="city">山西省-长治市-城　区</span>
+						<span id="city"></span>
 						<span style="color: #fcaf0a;cursor:pointer" onclick="changeCity()">[切换]</span>
 					</div>
 					&nbsp;&nbsp;&nbsp;&nbsp;
@@ -77,9 +77,9 @@
 					<img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/logo2.png"/>
 					<li><a href="${pageContext.request.contextPath}/home" class="active">首页</a></li>
 					<li><a href="${pageContext.request.contextPath}/w/category">找工人</a></li>
-					<li><a href="${pageContext.request.contextPath}">最新活动</a></li>
+					<%--<li><a href="${pageContext.request.contextPath}">最新活动</a></li>--%>
 					<li><a href="${pageContext.request.contextPath}">最新动态</a></li>
-					<li><a href="${pageContext.request.contextPath}">用户保障</a></li>
+					<%--<li><a href="${pageContext.request.contextPath}">用户保障</a></li>--%>
 					<li><a href="${pageContext.request.contextPath}/jobs/register">工人入驻</a></li>
 					<li><a href="${pageContext.request.contextPath}">城市加盟</a></li>
 					<li><a href="${pageContext.request.contextPath}/shop">商城</a></li>
@@ -116,6 +116,8 @@
         var loc = $.cookie("loc");
         if(loc!=null){
             $("#city").text(loc);
+        }else {
+            $("#city").text("山西省-长治市-城　区");
         }
     }
     function changeCity() {
@@ -199,7 +201,6 @@
 
                             /*获取地址*/
                             var a = str.replace(/,/g, "-");
-                            $("#city").text(a);
                             post("/home",{"location":a});
                             $(".cityCon").css("display","none");
                         }
