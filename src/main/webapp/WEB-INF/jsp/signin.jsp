@@ -65,6 +65,11 @@
                                             <button type="submit" class="btn btn-success btn-lg btn-block">登录</button>
                                         </span>
                                                 </div>
+                                    <div class="input-group input-group-lg" style="margin-bottom: 20px">
+                                        <span class="input-group-addon">
+                                            <a href="${pageContext.request.contextPath}/w/workerlogin">手机登录</a>
+                                        </span>
+                                    </div>
                                                 <div class="input-group input-group-lg" style="margin-bottom: 20px">
                                         <span class="input-group-addon">
                                             没有账户？<a href="${pageContext.request.contextPath}/account/signup">创建一个</a>

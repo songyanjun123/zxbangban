@@ -216,6 +216,27 @@ public class UserInfoController {
         }
 
     }
+
+        /*
+    * 根据手机号查询信息
+    *
+    * */
+        @RequestMapping(value = "/userInfo",method = RequestMethod.POST)
+        public String workerInfo(@RequestParam("tel")String tel,HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse,Model model){
+            try{
+                UserInfo userInfo= userInfoService.queryByTelphone(tel);
+                if(userInfo!=null){
+                    userLogin(httpServletRequest, httpServletResponse, model, userInfo.getUsername(), userInfo.getHeadImgUrl());
+                    return "redirect:/home";
+                }else {
+                model.addAttribute("errormsg","用户名或密码错误！");
+                return "signin";
+                }
+            }catch (Exception e){
+                model.addAttribute("errormsg","您的手机还未注册！");
+                return "signin";
+            }
+        }
     @RequestMapping(value = "/exit")
     public String exit(HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse){
         Cookie[] cookies = httpServletRequest.getCookies();

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -34,13 +35,23 @@ public class HomeController {
      * @return 首页功能跳转控制
      */
     @RequestMapping("/home")
-    public String home(Model model){
+    public String home(HttpServletRequest request, Model model){
+        Cookie[] cookies=request.getCookies();
         //查询工长，水电工，铺地工，腻子工
         WorkerDetail workerDetail = new WorkerDetail();
         WorkerInfo workerInfo = new WorkerInfo();
         workerInfo.setJobId(2);
         workerInfo.setWorkerId(8);
-        workerInfo.setLocation("山西省长治市城　区");
+        if (cookies != null) {
+            for (Cookie cookie:cookies) {
+                if(cookie.getName().equals("loc")){
+                    String location= cookie.getValue();
+                    workerInfo.setLocation(location);
+                }else{
+                    workerInfo.setLocation("山西省长治市城　区");
+                }
+            }
+        }
         workerDetail.setWorkerInfo(workerInfo);
         List<WorkerInfo> headmans = workerInfoService.showWorkers(workerDetail);
         workerInfo.setJobId(3);

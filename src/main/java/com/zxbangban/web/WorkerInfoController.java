@@ -175,20 +175,6 @@ public class WorkerInfoController {
         return "workerlogin";
     }
 
-    /*
-    * 根据工人手机号查询工人信息
-    *
-    * */
-    @RequestMapping(value = "/workerInfo",method = RequestMethod.POST)
-    public String workerInfo(@RequestParam("tel")String tel,Model model){
-        try{
-            WorkerInfo workerInfo= workerInfoService.queryByTel(tel);
-            model.addAttribute("workerinfo",workerInfo);
-            return "account/worker_changestate";
-        }catch (Exception e){
-            return "common/errorpage";
-        }
-    }
 
     /*
        * 根据工人修改的状态进行保存

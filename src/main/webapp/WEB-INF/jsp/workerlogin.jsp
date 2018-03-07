@@ -26,7 +26,7 @@
                     <div class="jumbotron">
                         <h2 style="color: #e48632">装修帮办登陆</h2>
                         <form class="bs-example bs-example-form" role="form"
-                              action="${pageContext.request.contextPath}/w/workerInfo" method="post">
+                              action="${pageContext.request.contextPath}/account/userInfo" method="post">
 
                             <div class="input-group input-group-lg" style="margin-bottom: 20px">
                                 <span class="input-group-addon">手机号</span>

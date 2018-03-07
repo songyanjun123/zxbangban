@@ -181,9 +181,7 @@ var workerlist = {
         },
         showworkers: function () {
             $(".bbb ul li").click(function () {
-                var location = $("#city").val();
                 var location=$("#city").html();
-                var location = $("#city").val();
                 var $id = $(this).val();
                 var $workerModal = $("#modal-container-workers");
                 var $info = "";
