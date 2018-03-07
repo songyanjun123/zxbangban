@@ -102,7 +102,7 @@ public class HomeController {
         model.addAttribute("industries",industries );
         model.addAttribute("projects",projects );
         model.addAttribute("decorates",decorates );
-        return "../../index";
+        return "../../index2";
     }
 
 
