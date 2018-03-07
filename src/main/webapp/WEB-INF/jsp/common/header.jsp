@@ -111,6 +111,7 @@
 	</ul>
 </div>
 <script>
+
     window.onload=function () {
         var loc = $.cookie("loc");
         if(loc!=null){
