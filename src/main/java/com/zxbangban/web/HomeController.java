@@ -16,6 +16,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.List;
 
@@ -35,7 +36,7 @@ public class HomeController {
      * @return 首页功能跳转控制
      */
     @RequestMapping("/home")
-    public String home(HttpServletRequest request, Model model){
+    public String home(HttpServletRequest request, Model model) throws UnsupportedEncodingException {
         Cookie[] cookies=request.getCookies();
         //查询工长，水电工，铺地工，腻子工
         WorkerDetail workerDetail = new WorkerDetail();
@@ -46,7 +47,9 @@ public class HomeController {
             for (Cookie cookie:cookies) {
                 if(cookie.getName().equals("loc")){
                     String location= cookie.getValue();
-                    workerInfo.setLocation(location);
+                    String location1= URLDecoder.decode(location,"utf8");
+                    workerInfo.setLocation(location1);
+                    break;
                 }else{
                     workerInfo.setLocation("山西省长治市城　区");
                 }
