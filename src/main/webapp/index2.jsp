@@ -37,7 +37,7 @@
 //            var a = bannerOff.style.height= "200";
         var banner = new FragmentBanner({
             container : "#banner1",//选择容器 必选
-            imgs : ['resources/images/banner1.png','resources/images/banner2.png','resources/images/banner3.png'],//图片集合 必选
+            imgs : ['https://zxbangban.oss-cn-beijing.aliyuncs.com/home/banner1.png','https://zxbangban.oss-cn-beijing.aliyuncs.com/home/banner2.png','https://zxbangban.oss-cn-beijing.aliyuncs.com/home/banner3.png'],//图片集合 必选
             size : {
                 width : w,
                 height : 150
@@ -55,7 +55,7 @@
     } else {
         var banner = new FragmentBanner({
             container : "#banner1",//选择容器 必选
-            imgs : ['resources/images/banner1.png','resources/images/banner2.png','resources/images/banner3.png'],//图片集合 必选
+            imgs : ['https://zxbangban.oss-cn-beijing.aliyuncs.com/home/banner1.png','https://zxbangban.oss-cn-beijing.aliyuncs.com/home/banner2.png','https://zxbangban.oss-cn-beijing.aliyuncs.com/home/banner3.png'],//图片集合 必选
             size : {
                 width : w,
                 height : 450
