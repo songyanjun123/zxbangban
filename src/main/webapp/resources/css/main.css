@@ -85,6 +85,10 @@
     opacity: 0;
     z-index: 999;
 }
+
+.top_nav .gznaver li a img{
+    width: 36px;height: 36px;background-color: #ccc;
+}
 .top_nav .gznaver > li:hover > img {
     display: inline-block;
     animation: myfirst 1.5s ease-in-out;
@@ -172,6 +176,13 @@
     }
     .navbar {
         display: none !important;
+    }
+    .top_nav .gznaver{
+        float: left;
+    }
+    .top_nav .gznaver li a img{
+        width: 2rem;
+        height:2rem;
     }
     .heder_nav {
         display: inline-block;

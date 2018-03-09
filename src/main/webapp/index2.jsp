@@ -4,11 +4,11 @@
 <head>
     <title>装修帮办-装修找帮办,省钱又省心</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
-    <link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+
     <link rel="stylesheet" type="text/css" href="resources/css/index.css" />
-    <script src="resources/js/tab.js" type="text/javascript" charset="utf-8"></script>
-    <script src="resources/js/main.js"></script>
+
     <script src="resources/js/tab.js"></script>
+    <%@include file="WEB-INF/jsp/common/head.jsp" %>
     <style type="text/css">
         .TechnolgP li div{
             width:150px;
@@ -37,7 +37,7 @@
 //            var a = bannerOff.style.height= "200";
         var banner = new FragmentBanner({
             container : "#banner1",//选择容器 必选
-            imgs : ['resources/images/banner1.png','resources/images/banner2.png','resources/images/banner3.png'],//图片集合 必选
+            imgs : ['https://zxbangban.oss-cn-beijing.aliyuncs.com/home/banner1.png','https://zxbangban.oss-cn-beijing.aliyuncs.com/home/banner2.png','https://zxbangban.oss-cn-beijing.aliyuncs.com/home/banner3.png'],//图片集合 必选
             size : {
                 width : w,
                 height : 150
@@ -55,7 +55,7 @@
     } else {
         var banner = new FragmentBanner({
             container : "#banner1",//选择容器 必选
-            imgs : ['resources/images/banner1.png','resources/images/banner2.png','resources/images/banner3.png'],//图片集合 必选
+            imgs : ['https://zxbangban.oss-cn-beijing.aliyuncs.com/home/banner1.png','https://zxbangban.oss-cn-beijing.aliyuncs.com/home/banner2.png','https://zxbangban.oss-cn-beijing.aliyuncs.com/home/banner3.png'],//图片集合 必选
             size : {
                 width : w,
                 height : 450
@@ -136,6 +136,7 @@
                 <ul class="pc_worker">
                     <c:forEach var="headerworker" items="${headmans}" varStatus="vs">
                         <li class="image_gr">
+                            <a href="/w/find/workerid=${headerworker.workerId}/home/i=1">
                             <div class="image_gr">
                                 <img src=${headerworker.headImgUrl} alt="" />
                             </div>
@@ -146,18 +147,21 @@
                                             成功案列：5套楼房
                                  </span>
                             </div>
+                            </a>
                         </li>
                     </c:forEach>
                 </ul>
                 <ul class="m_worker">
                     <c:forEach var="headerworker" items="${headmans}" varStatus="vs">
                         <li class="image_gr">
+                            <a href="/w/find/workerid=${headerworker.workerId}/home/i=1">
                             <img src=${headerworker.headImgUrl} alt="" class="col-xs-3" />
                             <div class="col-xs-8">
                                 <span style="display: inline-block;">${headerworker.name}</span>
                                 <span style="display: inline-block;">${headerworker.location}</span>
                                 <p> 成功案列：5套楼房</p>
                             </div>
+                            </a>
                         </li>
                     </c:forEach>
                 </ul>
@@ -174,6 +178,7 @@
                 <ul class="pc_worker">
                     <c:forEach var="plumber" items="${plumbers}" varStatus="vs">
                         <li class="image_gr">
+                            <a href="/w/find/workerid=${plumber.workerId}/home/i=1">
                             <div class="image_gr">
                                 <img src=${plumber.headImgUrl} alt="" />
                             </div>
@@ -184,6 +189,7 @@
                                             成功案列：5套楼房
                                  </span>
                             </div>
+                            </a>
                         </li>
                     </c:forEach>
                 </ul>
@@ -191,12 +197,14 @@
                 <ul class="m_worker">
                     <c:forEach var="plumber" items="${plumbers}" varStatus="vs">
                         <li class="image_gr">
+                            <a href="/w/find/workerid=${plumber.workerId}/home/i=1">
                             <img src=${plumber.headImgUrl} alt=""  class="col-xs-3" />
                             <div class="col-xs-8">
                                 <span>${plumber.name}</span>
                                 <span>${plumber.location}</span>
                                 <p>成功案列：5套楼房</p>
                             </div>
+                            </a>
                         </li>
                     </c:forEach>
                 </ul>
@@ -215,6 +223,7 @@
                 <ul class="pc_worker">
                     <c:forEach var="paving" items="${pavings}" varStatus="vs">
                         <li class="image_gr">
+                            <a href="/w/find/workerid=${paving.workerId}/home/i=1">
                             <div class="image_gr">
                                 <img src=${paving.headImgUrl} alt="" />
                             </div>
@@ -225,18 +234,21 @@
                                             成功案列：5套楼房
                                  </span>
                             </div>
+                            </a>
                         </li>
                     </c:forEach>
                 </ul>
                 <ul class="m_worker">
                     <c:forEach var="paving" items="${pavings}" varStatus="vs">
                         <li class="image_gr">
+                            <a href="/w/find/workerid=${paving.workerId}/home/i=1">
                             <img src=${paving.headImgUrl} alt="" />
                             <div class="col-xs-8">
                                 <span>${paving.name}</span>
                                 <span>${paving.location}</span>
                                 <p>成功案列：5套楼房</p>
                             </div>
+                            </a>
                         </li>
                     </c:forEach>
                 </ul>
@@ -254,6 +266,7 @@
                 <ul class="pc_worker">
                     <c:forEach var="putty" items="${Puttys}" varStatus="vs">
                         <li class="image_gr">
+                            <a href="/w/find/workerid=${putty.workerId}/home/i=1">
                             <div class="image_gr">
                                 <img src=${putty.headImgUrl} alt="" />
                             </div>
@@ -264,18 +277,21 @@
                                             成功案列：5套楼房
                                  </span>
                             </div>
+                            </a>
                         </li>
                     </c:forEach>
                 </ul>
                 <ul class="m_worker">
                     <c:forEach var="putty" items="${Puttys}" varStatus="vs">
                         <li class="image_gr">
+                            <a href="/w/find/workerid=${putty.workerId}/home/i=1">
                             <img src=${putty.headImgUrl} alt="" class="col-xs-3" />
                             <div class="col-xs-8">
                                 <span>${putty.name}</span>
                                 <span>${putty.location}</span>
                                 <p>成功案列：5套楼房</p>
                             </div>
+                            </a>
                         </li>
                     </c:forEach>
                 </ul>

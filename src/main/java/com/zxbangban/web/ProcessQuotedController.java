@@ -19,9 +19,9 @@ public class ProcessQuotedController {
         BigDecimal b = new BigDecimal(String.valueOf(0.6));
         BigDecimal cost = null;
         if(area < 90){
-            cost = BigDecimal.valueOf(200*90);
+            cost = BigDecimal.valueOf(250*90);
         }else {
-            cost = BigDecimal.valueOf(200*area);
+            cost = BigDecimal.valueOf(250*area);
         }
         Quoted quoted = new Quoted();
         quoted.setMaterialCost(a.multiply(cost));
