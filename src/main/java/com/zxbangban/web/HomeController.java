@@ -51,7 +51,7 @@ public class HomeController {
                     workerInfo.setLocation(location1);
                     break;
                 }else{
-                    workerInfo.setLocation("山西省长治市城　区");
+                    workerInfo.setLocation("山西省长治市市　区");
                 }
             }
         }

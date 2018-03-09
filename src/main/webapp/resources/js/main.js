@@ -24,7 +24,7 @@ var navbar = {
                 $navLogin.html(
                     "<li>" +
                     "<a href='/my-account/center' style='padding-top: 7px;padding-bottom: 7px;'>" +
-                    "<img src='" + $headImg + "' class='img-circle' style='width: 36px;height: 36px;background-color: #cccccc'/> " + $cookie + "</a>" +
+                    "<img src='" + $headImg + "' class='img-circle' /> " + $cookie + "</a>" +
                     "</li>" +
                     "<li>" +
                     "<a href='/account/exit'>注销</a>" +

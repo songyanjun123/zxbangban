@@ -288,27 +288,30 @@ a:hover {
   border: 1px solid #ccc;
   margin-top: 58px;
 }
-.recommend .construction > ul > li .image_gr {
+.recommend .construction > ul > li a{
+  color: #666;
+}
+.recommend .construction > ul > li a .image_gr {
   width: 100%;
   height: 139px;
   overflow: hidden;
 }
-.recommend .construction > ul > li .image_gr > img {
+.recommend .construction > ul > li a .image_gr > img {
   width: 100%;
   height: 100%;
   padding: 2px;
 }
-.recommend .construction > ul > li > .introduce {
+.recommend .construction > ul > li > a .introduce {
   width: 100%;
   padding-left: 12px;
 }
-.recommend .construction > ul > li > .introduce > h3 {
+.recommend .construction > ul > li > a .introduce > h3 {
   margin-top: 15px;
   margin-bottom: 0;
   padding: 0;
   font-size:14px;
 }
-.recommend .construction > ul > li > .introduce span {
+.recommend .construction > ul > li > a .introduce span {
   line-height: 35px;
 }
 .recommend .construction > ul .active {

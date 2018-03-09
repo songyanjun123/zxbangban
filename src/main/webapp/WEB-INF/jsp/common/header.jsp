@@ -33,8 +33,8 @@
 
 </style>
 
-<div class="fiexd" style="z-index:999">
-	<nav style="width: 100%;background: #fff;">
+<div class="fiexd" style="z-index:999" >
+	<nav style="width: 100%;background: #fff;" >
 		<div class="container">
 			<div class="top_nav clearfix">
 				<div class="address">
@@ -90,11 +90,10 @@
 </div>
 <div class="heder_nav">
 	<img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/logo2.png" />
-	<span>北京装修帮办施工平台</span>
-	<button type="button" class="navbar-toggle dropdown-toggle" onclick="show()">
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
+	<span>装修帮办专业施工平台</span>
+
+	<button type="button" class=" dropdown-toggle" onclick="show()" style="float: right;border:none;background: #e6a518">
+		<span class="glyphicon glyphicon-circle-arrow-down" style="display:block;font-size: 16px;color: #000;line-height: 6rem;">菜单</span>
 	</button>
 </div>
 
@@ -106,17 +105,19 @@
 		<%--<li><a href="${pageContext.request.contextPath}">最新动态</a></li>--%>
 		<%--<li><a href="${pageContext.request.contextPath}">用户保障</a></li>--%>
 		<li><a href="${pageContext.request.contextPath}/jobs/register">工人入驻</a></li>
-		<%--<li><a href="${pageContext.request.contextPath}">城市加盟</a></li>--%>
+		<li><a href="${pageContext.request.contextPath}">城市加盟</a></li>
 		<li><a href="${pageContext.request.contextPath}/shop">商城</a></li>
 	</ul>
 </div>
 <script>
+
+
    window.onload=function () {
         var loc = $.cookie("loc");
         if(loc!=null){
             $("#city").text(loc);
         }else {
-            $("#city").text("山西省-长治市-城　区");
+            $("#city").text("山西省-长治市-市　区");
         }
     };
     function changeCity() {
