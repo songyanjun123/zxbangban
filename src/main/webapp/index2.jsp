@@ -96,11 +96,11 @@
             </li>
             <li>
                 <div>
-
                     <img src="resources/images/home/right_arrow.png" alt="" />
                 </div>
 
             </li>
+
             <li>
                 <div>
                     <img src="resources/images/home/ruler.png" alt="" />
@@ -242,7 +242,7 @@
                     <c:forEach var="paving" items="${pavings}" varStatus="vs">
                         <li class="image_gr">
                             <a href="/w/find/workerid=${paving.workerId}/home/i=1">
-                            <img src=${paving.headImgUrl} alt="" />
+                            <img src=${paving.headImgUrl} alt="" class="col-xs-3"  />
                             <div class="col-xs-8">
                                 <span>${paving.name}</span>
                                 <span>${paving.location}</span>
