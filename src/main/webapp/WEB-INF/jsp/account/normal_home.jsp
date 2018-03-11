@@ -42,7 +42,7 @@
             <div class="col-md-4 col-sm-4 col-xs-12 column">
                 <div class="jumbotron">
                     <h2><img src="${userinfo.headImgUrl}" class="img-circle img-responsive headimg"/></h2>
-                    <h1>你好!</h1>
+                    <h3>欢迎回来!</h3>
                     <h4><img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/user.png"><span class="pull-right">${userinfo.username}</span></h4>
                     <h4><img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/password.png"><span class="pull-right"><a class="" href="${pageContext.request.contextPath}/my-account/editpassword">更改密码</a></span>
                     </h4>
