@@ -32,8 +32,8 @@
         <div class="row clearfix">
             <div class="col-md-12 col-sm-12 col-xs-12 column">
                 <ul class="nav nav-pills nav-justified" style="">
-                    <li  class="active"><a href="${pageContext.request.contextPath}/my-account/center">账号</a></li>
-                    <li><a href="${pageContext.request.contextPath}#">你的信息</a></li>
+                    <li class="active"><a href="${pageContext.request.contextPath}#">你的信息</a></li>
+                    <li><a href="${pageContext.request.contextPath}/my-account/center">账号</a></li>
                     <li><a href="#">订单信息</a></li>
                     <li><a href="#">协议与合同</a></li>
                     <li><a href="#">服务</a></li>
@@ -42,7 +42,7 @@
             <div class="col-md-4 col-sm-4 col-xs-12 column">
                 <div class="jumbotron">
                     <h2><img src="${userinfo.headImgUrl}" class="img-circle img-responsive headimg"/></h2>
-                    <h1>你好!</h1>
+                    <h3>欢迎回来!</h3>
                     <h4><img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/user.png"><span class="pull-right">${userinfo.username}</span></h4>
                     <h4><img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/password.png"><span class="pull-right"><a class="" href="#">更改密码</a></span></h4>
                 </div>
