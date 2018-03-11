@@ -111,14 +111,15 @@
 </div>
 <script>
 
-    window.onload = function() {
+
+   window.onload=function () {
         var loc = $.cookie("loc");
         if(loc!=null){
             $("#city").text(loc);
         }else {
             $("#city").text("山西省-长治市-市　区");
         }
-    }
+    };
     function changeCity() {
         $(".cityCon").css("display","inline-block");
         var aDiv = document.getElementById("div").getElementsByTagName("div");

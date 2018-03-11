@@ -49,6 +49,7 @@ public class HomeController {
                     String location= cookie.getValue();
                     String location1= URLDecoder.decode(location,"utf8");
                     workerInfo.setLocation(location1);
+                    break;
                 }else{
                     workerInfo.setLocation("山西省长治市市　区");
                 }
