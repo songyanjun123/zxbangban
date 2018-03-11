@@ -78,7 +78,7 @@
 					<li><a href="${pageContext.request.contextPath}/home" class="active">首页</a></li>
 					<li><a href="${pageContext.request.contextPath}/w/category">找工人</a></li>
 					<%--<li><a href="${pageContext.request.contextPath}">最新活动</a></li>--%>
-					<li><a href="${pageContext.request.contextPath}">最新动态</a></li>
+					<li><a href="${pageContext.request.contextPath}/newslist">最新动态</a></li>
 					<%--<li><a href="${pageContext.request.contextPath}">用户保障</a></li>--%>
 					<li><a href="${pageContext.request.contextPath}/jobs/register">工人入驻</a></li>
 					<li><a href="${pageContext.request.contextPath}">城市加盟</a></li>

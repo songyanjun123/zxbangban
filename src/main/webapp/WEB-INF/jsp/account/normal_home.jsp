@@ -32,8 +32,8 @@
         <div class="row clearfix">
             <div class="col-md-12 col-sm-12 col-xs-12 column">
                 <ul class="nav nav-pills nav-justified" style="">
-                    <li class="active"><a href="${pageContext.request.contextPath}/my-account/center">账号</a></li>
-                    <li><a href="${pageContext.request.contextPath}/my-account/profile">你的信息</a></li>
+                    <li class="active"><a href="${pageContext.request.contextPath}/my-account/profile">你的信息</a></li>
+                    <li><a href="${pageContext.request.contextPath}/my-account/center">账号</a></li>
                     <li><a href="#">订单信息</a></li>
                     <li><a href="#">协议与合同</a></li>
                     <li><a href="#">服务</a></li>

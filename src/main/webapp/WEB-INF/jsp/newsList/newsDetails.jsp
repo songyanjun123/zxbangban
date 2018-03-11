@@ -1,12 +1,24 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: pingyr
+  Date: 2017/4/29
+  Time: 14:09
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="../common/tag.jsp"%>
 <!doctype html>
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
     <title>新闻详情</title>
     <link rel="stylesheet" type="text/css" href="../../../resources/css/newsList.css">
+    <%@include file="../common/head.jsp"%>
 </head>
 <body class="user-select single">
-<section class="container">
+<%@include file="../common/header.jsp"%>
+<div class="page-wrapper"  style="background: #eee;">
+    <section class="container">
     <div class="content-wrap">
         <div class="content">
             <header class="article-header">
@@ -21,48 +33,48 @@
             </header>
             <article class="article-content">
                 <p>
-                    <img data-original="https://zxbangban.oss-cn-beijing.aliyuncs.com/home/aboutus.png" src="https://zxbangban.oss-cn-beijing.aliyuncs.com/home/aboutus.png" alt=""/>
+                    <img data-original="https://zxbangban.oss-cn-beijing.aliyuncs.com/home/banner1.png" src="https://zxbangban.oss-cn-beijing.aliyuncs.com/home/banner1.png" alt=""/>
+                </p>
+                <p id="desc">啊实打实大师阿萨德阿萨德阿萨德非得公司付款大公鸡ksmklsjogjdo评估到的房间观看打个卡大概看见的覅偶戴高帽地方购买电饭锅可能对方看来你吗，vnxcm,女警积分那个接口的方式呢工地欧股份那个尽可能的就开个那地方姐可能地方你就快过年地方看见你感动哭了烦死你公交卡十多年了发个可拉到烦死你干嘛你爸妈，现场女就开个his积分就南方你的房间快过年大嫁风尚那个
                 </p>
                 <p>
-                    新闻1
-                </p>
-                <p>
-                    <img data-original="https://zxbangban.oss-cn-beijing.aliyuncs.com/home/aboutus.png" src="https://zxbangban.oss-cn-beijing.aliyuncs.com/home/aboutus.png" alt=""/>
+                    <img data-original="" src="" alt=""/>
                 </p>
                 <p>
                     新闻2
                 </p>
                 <p>
-                    <img data-original="https://zxbangban.oss-cn-beijing.aliyuncs.com/home/aboutus.png" src="https://zxbangban.oss-cn-beijing.aliyuncs.com/home/aboutus.png" alt=""/>
-                    <img data-original="https://zxbangban.oss-cn-beijing.aliyuncs.com/home/aboutus.png" src="https://zxbangban.oss-cn-beijing.aliyuncs.com/home/aboutus.png" alt=""/>
+                    <img data-original="" src="" alt=""/>
                 </p>
                 <p>
                     新闻2
                 </p>
 
-                <div class="bdsharebuttonbox">
-                    <a href="#" class="bds_more" data-cmd="more"></a>
-                    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-                    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-                    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
-                    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
-                    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-                </div>
-                <script>
-                    window._bd_share_config = {
-                        "common": {
-                            "bdSnsKey": {},
-                            "bdText": "",
-                            "bdMini": "2",
-                            "bdMiniList": false,
-                            "bdPic": "",
-                            "bdStyle": "1",
-                            "bdSize": "32"
-                        },
-                        "share": {}
-                    };
-                    with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=0.js?cdnversion=' + ~(-new Date() / 36e5)];
-                </script>
+                <%--<script type="text/javascript">--%>
+                    <%--var desca = document.getElementById("desc").innerHTML.substring(0,40);--%>
+                    <%--var url = window.url;--%>
+
+                    <%--(function () {--%>
+                        <%--var p = {--%>
+                            <%--url: 'https://zxbangban.com/home',--%>
+                            <%--showcount: '1',/*是否显示分享总数,显示：'1'，不显示：'0' */--%>
+                            <%--desc:desca,/*默认分享理由(可选)*/--%>
+                            <%--summary: '敢不敢比一比谁家的装修费用低，打造全网最低装修',/*分享摘要(可选)*/--%>
+                            <%--title: '记录分享',/*分享标题(可选)*/--%>
+                            <%--site: '',/*分享来源 如：腾讯网(可选)*/--%>
+                            <%--pics: '', /*分享图片的路径(可选)*/--%>
+                            <%--style: '101',--%>
+                            <%--width: 199,--%>
+                            <%--height: 30--%>
+                        <%--};--%>
+                        <%--var s = [];--%>
+                        <%--for (var i in p) {--%>
+                            <%--s.push(i + '=' + encodeURIComponent(p[i] || ''));--%>
+                        <%--}--%>
+                        <%--document.write(['<a version="1.0" class="qzOpenerDiv" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?', s.join('&'), '" target="_blank">分享</a>'].join(''));--%>
+                    <%--})();--%>
+                <%--</script>--%>
+                <%--<script src="http://qzonestyle.gtimg.cn/qzone/app/qzlike/qzopensl.js#jsdate=20111201" charset="utf-8"></script>--%>
             </article>
             <div class="article-tags">
                 标签：
@@ -194,6 +206,9 @@
         </div>
 
     </aside></section>
+</div>
+<%@include file="../common/footer.jsp"%>
+
 </body>
 <script type="text/javascript">
     window.onload=function(){
