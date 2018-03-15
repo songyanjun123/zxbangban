@@ -15,6 +15,9 @@
         .headimg{
             background-color: #cccccc;
         }
+        .user{
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
@@ -45,18 +48,31 @@
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12 column">
                 <div class="jumbotron">
-                    <h2><img src="${userinfo.headImgUrl}" class="img-circle img-responsive headimg"/></h2>
-                    <span class="text-center"><a href="#">更改图片</a></span>
+                        <img src="${userinfo.headImgUrl}" class="img-circle img-responsive headimg"/>
+                        <%--<span class="text-center">
+                            <button type="button" class="btn btn-link" onclick="ei(this)" value="${userinfo.userId}">修改头像</button>
+                        </span>--%>
                 </div>
             </div>
             <div class="col-md-8 col-sm-8 col-xs-12 column">
                 <div class="jumbotron">
                     <div>
-                        <h2 style="margin-bottom: 0">${userProfile.name}</h2>
-                        <span><a href="#">编辑名字</a> </span>
+                        <h3 style="margin-bottom: 0">姓名：${userProfile.name}</h3>
                     </div>
                     <div style="margin-top: 20px">
-                        <span>${userinfo.username}</span>
+                        <span class="user">手机号：${userinfo.telphone}</span>
+                    </div>
+                    <div style="margin-top: 20px">
+                        <span class="user" >会员生日：${sydate}</span>
+                    </div>
+                    <div style="margin-top: 20px">
+                        <span class="user">会员等级：${userinfo.memberLevel} 级</span>
+                    </div>
+                    <div style="margin-top: 20px">
+                        <span>${userProfile.memberShip}</span>
+                    </div>
+                    <div style="margin-top: 20px">
+                        <span>${userProfile.projectAddresses}</span>
                     </div>
                 </div>
             </div>

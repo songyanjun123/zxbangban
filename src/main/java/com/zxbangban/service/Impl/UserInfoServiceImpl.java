@@ -50,4 +50,6 @@ public class UserInfoServiceImpl implements UserInfoService {
     public int saveUnameAndPassword(UserInfo userInfo){return  userInfoDao.saveUnameAndPassword(userInfo);}
 
     public int updateUnionId(String unionid,String telphone){return  userInfoDao.updateUnionId(unionid,telphone);}
+
+    public int  updateHeadImg(String username,String headImgUrl){return userInfoDao.updateHeadImg(username,headImgUrl);};
 }
