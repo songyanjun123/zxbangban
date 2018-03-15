@@ -49,13 +49,13 @@
                             <div class="input-group input-group-lg" style="margin-bottom: 20px">
                                 <input type="text" class="form-control" placeholder="请输入手机验证码" name="telcode">
                                 <span class="input-group-btn">
-                            <button class="btn btn-primary" type="button" id="codebtn">验证码</button>
-                        </span>
+                                    <button class="btn btn-primary" type="button" id="codebtn">验证码</button>
+                                </span>
                             </div>
                             <div class="input-group input-group-lg" style="margin-bottom: 20px">
-                        <span class="input-group-btn">
-                            <button type="submit" class="btn btn-success btn-block">免费预约</button>
-                        </span>
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-success btn-block">免费预约</button>
+                                </span>
                             </div>
                         </form>
                     </div>

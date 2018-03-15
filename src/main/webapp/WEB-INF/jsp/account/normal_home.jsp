@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: pingyr
-  Date: 2017/5/23
-  Time: 9:27
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="../common/tag.jsp" %>
 <html>
@@ -42,6 +35,10 @@
             <div class="col-md-4 col-sm-4 col-xs-12 column">
                 <div class="jumbotron">
                     <h2><img src="${userinfo.headImgUrl}" class="img-circle img-responsive headimg"/></h2>
+                    <span class="text-center">
+                        <button type="button" id="editHeader" class="btn button-link" onclick="editHeader1(this)">修改头像
+                        </button>
+                    </span>
                     <h1>你好!</h1>
                     <h4><img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/user.png"><span class="pull-right">${userinfo.username}</span></h4>
                     <h4><img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/password.png"><span class="pull-right"><a class="" href="${pageContext.request.contextPath}/my-account/editpassword">更改密码</a></span>
@@ -59,7 +56,6 @@
                     <div class="appoint">
                         <h5 class="loading">正在检查中</h5>
                     </div>
-
                 </div>
             </div>
             <div class="col-md-8 col-sm-8 col-xs-12 column">
@@ -94,6 +90,17 @@
             accounthomepage.detail.c($b,$a);
         }, 3000);
     });
+    function editHeader1(param) {
+        var $i = $(param);
+        $($i.parent()).html("<div class=''>" +
+            "<form class='form' enctype='multipart/form-data' action='/my-account/editUserHeadimg' method='post'>" +
+            "<input type='hidden' class='form-control' name='oldFile' value='${userinfo.headImgUrl}'>" +
+            "<div class='input-group'>" +
+            "<input type='file' class='form-control' name='file'>" +
+            "<span class='input-group-btn'><button type='submit' class='btn btn-default'>保存</button>" +
+            "</span>" +
+            "</div></form></div>");
+    }
 </script>
 </html>
 
