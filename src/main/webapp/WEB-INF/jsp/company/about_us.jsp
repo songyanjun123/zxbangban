@@ -727,69 +727,54 @@
                 <h3>&nbsp;</h3>
             </div>
         </div>
-        <div class="row clearfix">
+        <%--<div class="row clearfix">--%>
+            <%--<div class="col-md-3 col-sm-6 col-xs-12 column">--%>
+                <%--<div class="about_rel about_chuPeng">--%>
+                    <%--<img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/IT_team/pyr.png"--%>
+                         <%--class="about_absImg"/>--%>
+                    <%--<div class="about_team about_abs">--%>
+                        <%--<ul class="list-unstyled text-center">--%>
+                            <%--<li><h4><strong>技术总监</strong></h4></li>--%>
+                            <%--<li>具有多年JAVA Web开发经验，对于最新的响应式网站开发具有独到的见解。</li>--%>
+                        <%--</ul>--%>
+                    <%--</div>--%>
+                    <%--<div class="list-unstyled text-center about_ul_li">--%>
+                        <%--<h4><strong>平芸瑞</strong></h4>--%>
+                        <%--<h5>技术总监</h5>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+
+            <%--</div>--%>
+
             <div class="col-md-3 col-sm-6 col-xs-12 column">
                 <div class="about_rel about_chuPeng">
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/IT_team/pyr.png"
                          class="about_absImg"/>
                     <div class="about_team about_abs">
                         <ul class="list-unstyled text-center">
-                            <li><h4><strong>技术总监</strong></h4></li>
-                            <li>具有多年JAVA Web开发经验，对于最新的响应式网站开发具有独到的见解。</li>
-                        </ul>
-                    </div>
-                    <div class="list-unstyled text-center about_ul_li">
-                        <h4><strong>平芸瑞</strong></h4>
-                        <h5>技术总监</h5>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 column">
-                <div class="about_rel about_chuPeng">
-                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/IT_team/mm.png"
-                         class="about_absImg"/>
-                    <div class="about_team about_abs">
-                        <ul class="list-unstyled text-center">
-                            <li><h4><strong>UI设计师</strong></h4></li>
-                            <li>有着多年的设计经验，对极简主义有着自己的独特理解，对于HTML5的响应式开发有独到的见解。</li>
-                        </ul>
-                    </div>
-                    <div class="list-unstyled text-center about_ul_li">
-                        <h4><strong>马铭</strong></h4>
-                        <h5>UI设计师</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 column">
-                <div class="about_rel about_chuPeng">
-                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/IT_team/lf.png"
-                         class="about_absImg"/>
-                    <div class="about_team about_abs">
-                        <ul class="list-unstyled text-center">
-                            <li><h4><strong>JAVA程序员</strong></h4></li>
+                            <li><h4><strong>JAVA开发工程师</strong></h4></li>
                             <li>具有深刻的JAVA开发经验，年轻，充满活力的极客。</li>
                         </ul>
                     </div>
                     <div class="list-unstyled text-center about_ul_li">
                         <h4><strong>赵志衡</strong></h4>
-                        <h5>JAVA程序员</h5>
+                        <h5>JAVA开发工程师</h5>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12 column">
                 <div class="about_rel about_chuPeng">
-                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/IT_team/ws.png"
+                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/IT_team/pyr.png"
                          class="about_absImg"/>
                     <div class="about_team about_abs">
                         <ul class="list-unstyled text-center">
-                            <li><h4><strong>实习运维</strong></h4></li>
-                            <li>曾经的JAVA程序员，转职DBA后，现任职公司运维管理。</li>
+                            <li><h4><strong>前端开发工程师</strong></h4></li>
+                            <li>具有深刻的前端开发经验，对后台有一定的了解</li>
                         </ul>
                     </div>
                     <div class="list-unstyled text-center about_ul_li">
-                        <h4><strong>王帅</strong></h4>
-                        <h5>实习运维</h5>
+                        <h4><strong>宋艳军</strong></h4>
+                        <h5>前端开发工程师</h5>
                     </div>
                 </div>
 

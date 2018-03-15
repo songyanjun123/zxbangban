@@ -272,13 +272,26 @@ public class HomeController {
 
     /**
      *
+     * @return 公司新闻页面跳转
+     */
+    @RequestMapping("/newslist")
+    public String newslist(){return "newsList/newsList";}
+
+    /**
+     *
+     * @return 公司新闻详情页面跳转
+     */
+    @RequestMapping("/newsDetails")
+    public String newsDetails(){return "newsList/newsDetails";}
+
+    /**
+     *
      * @return 装修效果图页面
      */
     @RequestMapping("/effect")
     public String effect(){
         return "effect/effect";
     }
-
     /**
      *
      * @return 装修效果图列表页面

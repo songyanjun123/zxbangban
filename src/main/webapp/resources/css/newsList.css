@@ -391,16 +391,26 @@ body,button,input,select,textarea {
 }
 @media (max-width:680px){
     .excerpt h2{
-        font-size:2.25rem;
+        font-size:1.25rem;
     }
     .excerpt .cat{
-        font-size:2.25rem;
+        display: none;
     }
     .excerpt .meta{
         font-size:2rem;
     }
     .excerpt .note{
         font-size:2rem;
+    }
+    .excerpt .focus{
+        width:9rem;
+    }
+    .excerpt .thumb{
+        width:100%;
+        height:100%;
+    }
+    .excerpt header ,.excerpt .meta ,.excerpt .note{
+        margin-left:-11rem;
     }
 }
 .excerpt h2 a {
