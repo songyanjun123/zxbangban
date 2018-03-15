@@ -120,9 +120,11 @@
 					</div>
 				</div>
 			</div>
+			<div style="clear: both"></div>
 		</div>
 		<%@include file="common/footer.jsp" %>
 	</body>
+	<%@include file="common/script.jsp" %>
 	<script type="text/javascript">
 		/*预约总数*/
 		var total_num = document.getElementById("total_num").getElementsByTagName("li").length;

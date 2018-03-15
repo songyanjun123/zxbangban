@@ -270,6 +270,15 @@ public class HomeController {
     }
 
 
+
+    /**
+     *
+     * @return 施工队详情跳转
+     */
+    @RequestMapping("/foreman")
+    public String foreman(){
+        return "foreman";
+    }
     /**
      *
      * @return 公司新闻页面跳转

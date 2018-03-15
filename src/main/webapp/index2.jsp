@@ -208,12 +208,17 @@
                         </li>
                     </c:forEach>
                 </ul>
-            </div>awdws
-                    </p>
-                    <img src="resources/images/home/collection.png" />
+            </div>
 
-                    <span><a href="${pageContext.request.contextPath}/w/category">更多>></a></span>
-                </div>
+            <%--铺地工师傅推荐--%>
+             <div class="construction">
+                 <div>
+                     <p class="bgg">
+                         <span>铺地工师傅推荐</span>
+                     </p>
+                     <img src="resources/images/home/collection.png" />
+                     <span><a href="${pageContext.request.contextPath}/w/category">更多>></a></span>
+                 </div>
                 <ul class="pc_worker">
                     <c:forEach var="paving" items="${pavings}" varStatus="vs">
                         <li class="image_gr">
