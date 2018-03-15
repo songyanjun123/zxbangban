@@ -1,0 +1,290 @@
+/**
+ *宽度990--工作店铺等------------------
+*/
+body{
+	font-size: 12px;
+}
+.clear{
+	clear: both;
+}
+.gz-layout { width:990px; margin:0 auto;}
+.gz-250 {
+    width: 250px;
+    float: left;
+}
+.gz-250 .ngz-gzphoto {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+.gz-250 .ngz-gzphoto img {
+    width: 250px;
+    height: 250px;
+}
+.gz-250 .ngz-yybtn {
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    display: block;
+    background-color: #ff4400;
+    color: #fff;
+    font-size: 14px;
+}
+.gz-250 .ngz-call {
+    height: 42px;
+    line-height: 42px;
+    width: 100%;
+    padding-left: 105px;
+    background: url(../../resources/images/ngz-call.png) #e3e3e3 no-repeat;
+    color: #ff4400;
+    font-size: 18px;
+    display: inline-block;
+}
+.gz-716 {
+    width: 716px;
+    float: right;
+}
+.gz-716 .ngz-about-w {
+    height: 90px;
+    border-right: 2px solid #eaeaea;
+    margin: 25px 0;
+    float: left;
+}
+.gz-716 .ngz-xm-w {
+    height: 20px;
+    width: 100%;
+}
+.gz-716 .ngz-about-w p, .gz-250 .ngz-xx-w p {
+    color: #666;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 0;
+}
+.gz-716 .ngz-xm-w h1, .gz-250 .ngz-xx-w .ngz-xm-w h2 {
+    font-size: 16px;
+    line-height: 100%;
+    display: inline;
+    font-weight: normal;
+}
+.rz, .level-01, .level-02, .level-03, .time {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url(../../resources/images/ico-bg.png) no-repeat;
+    _background: url(./../resources/images/ico-bg-ie6.png) no-repeat;
+    vertical-align: middle;
+    margin-right: 3px;
+    margin-left: 6px;
+}
+.rz {
+    background-position: -60px 0;
+}
+.gz-716 .ngz-xm-w i, .gz-250 .ngz-xx-w .ngz-xm-w i {
+    margin-top: -3px;
+}
+.level-02 {
+    background-position: -20px 0;
+}
+.gz-716 .ngz-xm-w i, .gz-250 .ngz-xx-w .ngz-xm-w i {
+    margin-top: -3px;
+}
+.gz-716 .ngz-about-w {
+    height: 90px;
+    border-right: 2px solid #eaeaea;
+    margin: 25px 0;
+    float: left;
+}
+
+
+
+.gz-716 .ngz-about-w p span, .gz-250 .ngz-xx-w p span {
+    color: #00a566;
+}
+
+
+.gz-716 .ngz-about-w p, .gz-250 .ngz-xx-w p {
+    color: #666;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 0;
+    width: 49%;
+}
+
+
+
+.ngz-ico-jg, .ngz-ico-cy, .ngz-ico-qy, .ngz-ico-qd, .ngz-ico-yy, .ngz-ico-pj, .ngz-ico-zjgd {
+    width: 14px;
+    height: 14px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 4px;
+    margin-right: 5px;
+    _margin-top: 8px;
+    background: url(../../resources/images/new-gz-bg.png) no-repeat;
+}
+.ngz-ico-qd {
+    background-position: -42px 0;
+}
+.ngz-ico-yy {
+    background-position: -14px 0;
+}
+.ngz-ico-pj {
+    background-position: -56px 0;
+}
+.ngz-ico-jg {
+    background-position: 0 0;
+}
+.ngz-ico-jl, .ngz-ico-bzj, .ngz-ico-zb {
+    width: 20px;
+    height: 26px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+    margin-right: 6px;
+    _margin-top: 2px;
+    background: url(../../resources/images/new-gz-bg.png) no-repeat;
+}
+.ngz-ico-jl {
+    background-position: 0 -14px;
+}
+.ngz-ico-zb {
+    background-position: -40px -14px;
+}
+.gz-716 h3, .gz-716-border h3 {
+    color: #6c6c6c;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 16px;
+    width: 100%;
+    line-height: 100%;
+}
+.gz-716 .no-yx, .gz-716-border .no-yx {
+    width: 100%;
+    margin-bottom: 30px;
+    color: #a5a5a5;
+}
+
+.gz-716 .about {
+    line-height: 22px;
+    padding-right: 20px;
+    display: inline-block;
+}
+.gz-layout {
+    width: 990px;
+    margin: 0 auto;
+}
+.gz-250 {
+    width: 250px;
+    float: left;
+}
+.ngz-border {
+    border: 1px solid #d6d6d6;
+    padding: 0 14px;
+}
+.gz-250 .ngz-border {
+    width: 100%;
+}
+.ngz-tit {
+    height: 49px;
+    line-height: 49px;
+    border-bottom: 1px solid #bbbbbb;
+}
+.ngz-tit h2 {
+    color: #01af63;
+    float: left;
+}
+.gz-250 .ngz-border h2 {
+    font-size: 14px;
+}
+.ngz-tit span, .ngz-tit a {
+    color: #505050;
+    float: right;
+}
+.ngz-tit span i {
+    font-style: normal;
+    color: #01af63;
+}
+.ngz-my-yz {
+    padding: 12px 0;
+}
+.ngz-my-yz li {
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #505050;
+}
+.ngz-my-yz li .name {
+    width: 60px;
+    float: left;
+}
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.ngz-my-yz li .address {
+    width: 68px;
+    float: left;
+}
+.ngz-my-yz li .date {
+    width: 50px;
+    float: left;
+    text-align: right;
+}
+.ngz-border {
+    border: 1px solid #d6d6d6;
+    padding: 0 14px;
+}
+.ngz-tit {
+    height: 49px;
+    line-height: 49px;
+    border-bottom: 1px solid #bbbbbb;
+}
+.gz-250 .ngz-border .ngz-pj-w {
+    width: 220px;
+    height: auto;
+    overflow: hidden;
+}
+.gz-250 .ngz-border .ngz-pj-w {
+    margin-top: -1px;
+}
+.gz-716 {
+    width: 716px;
+    float: right;
+}
+.gz-716 .ngz-border {
+    width: 100%;
+}
+.gz-716 .ngz-border h2 {
+    font-size: 16px;
+}
+.ngz-tit span, .ngz-tit a {
+    color: #505050;
+    float: right;
+}
+.ngz-new-dd {
+    color: #4f4f4f;
+    text-align: center;
+}
+.ngz-new-dd dt{
+    float: left;
+    height: 42px;
+    line-height: 42px;
+    font-weight: bold;
+}
+.ngz-new-dd dd {
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    border-top: 1px dotted #dbdbdb;
+}

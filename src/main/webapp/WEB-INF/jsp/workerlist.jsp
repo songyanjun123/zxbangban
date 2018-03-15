@@ -184,76 +184,75 @@
 				<li value="4">
 					<img src="../../resources/images/worker/fangshui.png" alt="" />
 					<!--<span>防水工</span>-->
-
 				</li>
-				<li value="4">
+				<li value="5">
 					<img src="../../resources/images/worker/cizhuan.png" alt="" />
 					<!--<span>瓷砖工</span>-->
 
 				</li>
-				<li value="5">
+				<li value="6">
 					<img src="../../resources/images/worker/mug.png" alt="" />
 					<!--<span>木工</span>-->
 
 				</li>
-				<li value="6">
+				<li value="7">
 					<img src="../../resources/images/worker/youqi.png" alt="" />
 					<!--<span>油漆工</span>-->
 
 				</li>
 			</ul>
 			<ul>
-				<li value="7">
+				<li value="8">
 					<img src="../../resources/images/worker/shicai.png" alt="" />
 					<!--<span>石材工</span>-->
 				</li>
-				<li value="8">
+				<li value="9">
 					<img src="../../resources/images/worker/diaoding.png" alt="" />
 					<!--<span>吊顶工</span>-->
 
 				</li>
-				<li value="9">
+				<li value="10">
 					<img src="../../resources/images/worker/jic.png" alt="" />
 					<!--<span>集成墙吊顶</span>-->
 
 				</li>
-				<li value="10">
+				<li value="11">
 					<img src="../../resources/images/worker/jiaj.png" alt="" />
 					<!--<span>家俱安装工</span>-->
 
 				</li>
-				<li value="11">
+				<li value="12">
 					<img src="../../resources/images/worker/bizhi.png" alt="" />
 					<!--<span>壁纸工</span>-->
 
 				</li>
 
 
-				<li value="12">
+				<li value="13">
 					<img src="../../resources/images/worker/jiaz.png" alt="" />
 					<!--<span>家政</span>-->
 				</li>
-				<li value="13">
+				<li value="14">
 					<img src="../../resources/images/worker/songhuo.png" alt="" />
 					<!--<span>送货工</span>-->
 
 				</li>
-				<li value="14">
+				<li value="15">
 					<img src="../../resources/images/worker/mudiban.png" alt="" />
 					<!--<span>木地板工</span>-->
 
 				</li>
-				<li value="15">
+				<li value="16">
 					<img src="../../resources/images/worker/tuj.png" alt="" />
 					<!--<span>土建工</span>-->
 
 				</li>
-				<li value="16">
+				<li value="17">
 					<img src="../../resources/images/worker/meifeng.png" alt="" />
 					<!--<span>美缝工</span>-->
 				</li>
 
-				<li value="17">
+				<li value="18">
 					<img src="../../resources/images/worker/blig.png" alt="" />
 					<!--<span>包立管</span>-->
 				</li>

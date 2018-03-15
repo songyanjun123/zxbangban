@@ -208,13 +208,7 @@
                         </li>
                     </c:forEach>
                 </ul>
-            </div>
-
-            <!--铺地工师傅推荐-->
-            <div class="construction">
-                <div>
-                    <p class="bgg">
-                        <span>铺地工师傅推荐</span>
+            </div>awdws
                     </p>
                     <img src="resources/images/home/collection.png" />
 
