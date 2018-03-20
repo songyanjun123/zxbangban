@@ -48,7 +48,7 @@ var navbar = {
                     "\t\t\t\t</li>\n" +
                     "\t\t\t\t<li class=\"erweima\">\n" +
                     "\t\t\t\t\t<a target=\"\" href=\"/customer-service\" >公众号&nbsp;&nbsp;&nbsp;<em class=\"down_down\"></em></a>\n" +
-                    "\t\t\t\t\t<img src=\"../../../resources/images/common/QR_2.jpg\" alt=\"\" />\n" +
+                    "\t\t\t\t\t<img src=\"http://zxbangban.oss-cn-beijing.aliyuncs.com/header/QR_2.jpg\" alt=\"\" />\n" +
                     "\t\t\t\t</li>");
             }
         },

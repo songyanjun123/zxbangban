@@ -125,7 +125,7 @@
     <div class="row">
         <div class="recommend col-md-8 col-xs-12 col-sm-8">
             <!--施工队队长推荐-->
-            <div class="construction">
+            <div class="construction" id="shigd">
                 <div>
                     <p class="bgg">
                         <span>施工队队长推荐</span>
@@ -413,7 +413,6 @@
     </div>
 </div>
 
-
 <div class="tab_case">
     <h1>成功案例</h1>
     <div class="tab_nav">
@@ -426,7 +425,7 @@
         <ul class="show">
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/bies/01/01_cant.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/bies/01/01_cant.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -437,7 +436,7 @@
             </li>
             <li class="active">
                 <div>
-                    <img class="aa" src="resources/images/home/bies/01/01_chas.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/bies/01/01_chas.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -448,7 +447,7 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/bies/01/01_chuf.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/bies/01/01_chuf.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -459,7 +458,7 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/bies/01/01_jiaz.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/bies/01/01_jiaz.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -470,7 +469,7 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/bies/01/01_jiub.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/bies/01/01_jiub.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -481,7 +480,7 @@
             </li>
             <li class="active">
                 <div>
-                    <img class="aa" src="resources/images/home/bies/01/01_ket.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/bies/01/01_ket.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -492,7 +491,7 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/bies/01/01_keta.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/bies/01/01_keta.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -503,7 +502,7 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/bies/01/01_wos.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/bies/01/01_wos.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -516,7 +515,7 @@
         <ul>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/zhongshi/01/01.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/zhongs/01/01.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -527,7 +526,7 @@
             </li>
             <li class="active">
                 <div>
-                    <img class="aa" src="resources/images/home/zhongshi/01/02.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/zhongs/01/02.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -538,7 +537,7 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/zhongshi/01/03.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/zhongs/01/03.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -549,7 +548,7 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/zhongshi/01/04.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/zhongs/01/04.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -560,7 +559,7 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/zhongshi/01/05.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/zhongs/01/05.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -571,7 +570,7 @@
             </li>
             <li class="active">
                 <div>
-                    <img class="aa" src="resources/images/home/zhongshi/01/06.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/zhongs/01/06.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -582,7 +581,7 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/zhongshi/01/07.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/zhongs/01/07.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -593,98 +592,7 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/zhongshi/01/08.jpg"/>
-                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
-                </div>
-                <div>
-                    <p>北京装修帮办施工平台</p>
-                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
-                    <p>设计师</p>
-                </div>
-            </li>
-
-        </ul>
-        <ul>
-            <li>
-                <div>
-                    <img class="aa" src="resources/images/home/tiany/01/01.jpg"/>
-                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
-                </div>
-                <div>
-                    <p>北京装修帮办施工平台</p>
-                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
-                    <p>设计师</p>
-                </div>
-            </li>
-            <li class="active">
-                <div>
-                    <img class="aa" src="resources/images/home/tiany/01/02.jpg"/>
-                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
-                </div>
-                <div>
-                    <p>北京装修帮办施工平台</p>
-                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
-                    <p>设计师</p>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <img class="aa" src="resources/images/home/tiany/01/03.jpg"/>
-                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
-                </div>
-                <div>
-                    <p>北京装修帮办施工平台</p>
-                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
-                    <p>设计师</p>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <img class="aa" src="resources/images/home/tiany/01/04.jpg"/>
-                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
-                </div>
-                <div>
-                    <p>北京装修帮办施工平台</p>
-                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
-                    <p>设计师</p>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <img class="aa" src="resources/images/home/tiany/01/05.jpg"/>
-                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
-                </div>
-                <div>
-                    <p>北京装修帮办施工平台</p>
-                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
-                    <p>设计师</p>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <img class="aa" src="resources/images/home/tiany/01/06.jpg"/>
-                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
-                </div>
-                <div>
-                    <p>北京装修帮办施工平台</p>
-                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
-                    <p>设计师</p>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <img class="aa" src="resources/images/home/tiany/01/07.jpg"/>
-                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
-                </div>
-                <div>
-                    <p>北京装修帮办施工平台</p>
-                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
-                    <p>设计师</p>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <img class="aa" src="resources/images/home/tiany/01/08.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/zhongs/01/08.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -697,7 +605,7 @@
         <ul>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/meis/01/01.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/tiany/01/01.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -708,7 +616,7 @@
             </li>
             <li class="active">
                 <div>
-                    <img class="aa" src="resources/images/home/meis/01/02.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/tiany/01/02.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -719,7 +627,7 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/meis/01/03.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/tiany/01/03.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -730,7 +638,7 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/meis/01/04.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/tiany/01/04.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -741,18 +649,7 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/meis/01/05.jpg"/>
-                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
-                </div>
-                <div>
-                    <p>北京装修帮办施工平台</p>
-                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
-                    <p>设计师</p>
-                </div>
-            </li>
-            <li class="active">
-                <div>
-                    <img class="aa" src="resources/images/home/meis/01/06.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/tiany/01/05.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -763,7 +660,7 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/meis/01/07.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/tiany/01/06.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -774,7 +671,18 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/meis/01/08.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/tiany/01/07.jpg?x-oss-process=style/style"/>
+                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
+                </div>
+                <div>
+                    <p>北京装修帮办施工平台</p>
+                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
+                    <p>设计师</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/tiany/01/08.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -787,7 +695,7 @@
         <ul>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/xiandai/01/01.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/meis/01/01.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -798,7 +706,7 @@
             </li>
             <li class="active">
                 <div>
-                    <img class="aa" src="resources/images/home/xiandai/01/02.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/meis/01/02.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -809,7 +717,7 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/xiandai/01/03.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/meis/01/03.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -820,7 +728,7 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/xiandai/01/04.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/meis/01/04.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -831,7 +739,18 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/xiandai/01/05.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/meis/01/05.jpg?x-oss-process=style/style"/>
+                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
+                </div>
+                <div>
+                    <p>北京装修帮办施工平台</p>
+                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
+                    <p>设计师</p>
+                </div>
+            </li>
+            <li class="active">
+                <div>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/meis/01/06.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -842,7 +761,7 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/xiandai/01/06.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/meis/01/07.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -853,7 +772,31 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/xiandai/01/07.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/meis/01/08.jpg?x-oss-process=style/style"/>
+                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
+                </div>
+                <div>
+                    <p>北京装修帮办施工平台</p>
+                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
+                    <p>设计师</p>
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <div>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/xiandai/01/01.jpg?x-oss-process=style/style"/>
+                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
+                </div>
+                <div>
+                    <p>北京装修帮办施工平台</p>
+                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
+                    <p>设计师</p>
+                </div>
+            </li>
+            <li class="active">
+                <div>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/xiandai/01/02.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
@@ -864,7 +807,62 @@
             </li>
             <li>
                 <div>
-                    <img class="aa" src="resources/images/home/xiandai/01/08.jpg"/>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/xiandai/01/03.jpg?x-oss-process=style/style"/>
+                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
+                </div>
+                <div>
+                    <p>北京装修帮办施工平台</p>
+                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
+                    <p>设计师</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/xiandai/01/04.jpg?x-oss-process=style/style"/>
+                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
+                </div>
+                <div>
+                    <p>北京装修帮办施工平台</p>
+                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
+                    <p>设计师</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/xiandai/01/05.jpg?x-oss-process=style/style"/>
+                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
+                </div>
+                <div>
+                    <p>北京装修帮办施工平台</p>
+                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
+                    <p>设计师</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/xiandai/01/06.jpg?x-oss-process=style/style"/>
+                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
+                </div>
+                <div>
+                    <p>北京装修帮办施工平台</p>
+                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
+                    <p>设计师</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/xiandai/01/07.jpg?x-oss-process=style/style"/>
+                    <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
+                </div>
+                <div>
+                    <p>北京装修帮办施工平台</p>
+                    <span>秦智新</span><span>工龄：3年</span><span>成功案例：60套</span>
+                    <p>设计师</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img class="aa" src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/xiandai/01/08.jpg?x-oss-process=style/style"/>
                     <img src="https://zxbangban.oss-cn-beijing.aliyuncs.com/491507520220008.png?x-oss-process=style/headimg" alt="" class="HeadP" />
                 </div>
                 <div>
