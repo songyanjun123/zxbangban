@@ -20,4 +20,5 @@ public interface UserInfoDao {
     int saveUserInfo(@Param("userInfo") UserInfo userInfo);
     int saveUnameAndPassword(@Param("userInfo") UserInfo userInfo);
     int updateUnionId(@Param("unionid")String unionid,@Param("telphone")String telphone);
+    int updateHeadImg(@Param("username") String username,@Param("headImgUrl") String headImgUrl);
 }

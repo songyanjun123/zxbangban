@@ -18,6 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 /**
@@ -102,9 +103,11 @@ public class MyAccountController {
                     userProfile = new UserProfile();
                     userProfile.setName(userInfo.getUsername());
                 }
+               String sydate= new SimpleDateFormat("yyyy-MM--dd").format(userInfo.getCreateTime());
                 model.addAttribute("userProfile",userProfile);
                 model.addAttribute("userinfo", userInfo);
                 model.addAttribute("headimg", userInfo.getHeadImgUrl());
+                model.addAttribute("sydate",sydate);
                 return "account/normal_profile";
             } catch (NullPointerException e) {
                 return "signin";
@@ -151,6 +154,21 @@ public class MyAccountController {
 
         return "account/changepassword";
     }
+    @RequestMapping(value = "/editUserHeadimg")
+    public String editUserHeadImg(@SessionAttribute("uid")String uid,@RequestParam("oldFile")String oldFile,@RequestParam("file")MultipartFile file){
+        try {
+            //将阿里云中图片删除，保存新图片
+            UserInfo userInfo=userInfoService.queryByUsername(uid);
+            String  headImgName=aliyunOSService.updateHeadImages(userInfo.getUserId(),file,oldFile);
+            //更新数据库图片的地址
+            String headImgUrl="https://zxbangban.oss-cn-beijing.aliyuncs.com/" + headImgName + "?x-oss-process=style/headimg";
+                userInfoService.updateHeadImg(uid,headImgUrl);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return "redirect:/my-account/center";
+    }
+
     @RequestMapping(value = "/editheadimg")
     public String editHeadImg(@SessionAttribute("uid")String uid,@RequestParam("oldFile")String oldFile,@RequestParam(value = "file")MultipartFile file){
         try {
@@ -159,7 +177,6 @@ public class MyAccountController {
             List<WorkerInfo> list = workerInfoService.queryByTelphone(tel);
             String imgName = aliyunOSService.updateHeadImages(userInfo.getUserId(),file,oldFile);
             String url = "https://zxbangban.oss-cn-beijing.aliyuncs.com/" + imgName + "?x-oss-process=style/headimg";
-            System.out.println(url);
             for(WorkerInfo workerInfo : list){
                 workerInfoService.editheadimg(workerInfo.getWorkerId(),url);
             }

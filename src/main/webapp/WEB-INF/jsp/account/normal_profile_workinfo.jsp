@@ -81,9 +81,9 @@
             <div class="col-md-4 col-sm-4 col-xs-12 column">
                 <div class="jumbotron">
                     <h2><img src="${worker.headImgUrl}" class="img-circle img-responsive headimg"/></h2>
-                    <span class="text-center">
-                            <button type="button" class="btn btn-link" onclick="ei(this)" value="${worker.workerId}">修改头像</button>
-                        </span>
+                        <span class="text-center">
+                                <button type="button" class="btn btn-link" onclick="ei(this)" value="${worker.workerId}">修改头像</button>
+                            </span>
                 </div>
             </div>
             <div class="col-md-8 col-sm-8 col-xs-12 column">
@@ -227,14 +227,14 @@
         flag = $($i).val();
         $($($i).parent()).html("<div><div class='input-group'>" +
             "<font size='6'>"+"工作地址："+"</font>"+
-            "<select class='select' id='province_code' name='province_code' onchange='getCity()'>"+
+            "<select class='select' id='provinces' name='province_code' onchange='getCitys()'>"+
 
             "</select>"+
 
-            "<select class='select' id='city_code' name='city_code' onchange='getArea()'>"+
+            "<select class='select' id='citys' name='city_code' onchange='getAreas()'>"+
             "</select>"+
 
-            "<select class='select' id='area_code' name='area_code'>"+
+            "<select class='select' id='areas' name='area_code'>"+
 
             "</select>" +
             "<span><button type='button' class='btn btn-default' onclick='l()'>保存</button>" +
@@ -247,7 +247,7 @@
             success: function (data) {
                 var result = eval('(' + data + ')');
                 for (var i = 0; i < result.length; i++) {
-                    $('#province_code').append("<option value='" + result[i].code + "' >" + result[i].name + "</option>");
+                    $('#provinces').append("<option value='" + result[i].code + "' >" + result[i].name + "</option>");
                 }
             },
             error: function () {
@@ -256,10 +256,10 @@
         });
     }
     /*加载市下拉选*/
-    function getCity() {
-        var id = $("#province_code").val();
-        $("#city_code").empty();
-        $("#area_code").empty();
+    function getCitys() {
+        var id = $("#provinces").val();
+        $("#citys").empty();
+        $("#areas").empty();
         $.ajax({
             type: "post",
             url: "/worker-console/queryCityByCode",
@@ -267,10 +267,10 @@
             data: {"id": id},
             success: function (data) {
                 var result = eval('(' + data + ')');
-                $('#city_code').append("<option value='' selected='selected' >" + '--请选择--' + "</option>");
-                $('#area_code').append("<option value='' selected='selected' >" + '--请选择--' + "</option>");
+                $('#citys').append("<option value='' selected='selected' >" + '--请选择--' + "</option>");
+                $('#areas').append("<option value='' selected='selected' >" + '--请选择--' + "</option>");
                 for (var i = 0; i < result.length; i++) {
-                    $('#city_code').append("<option value='" + result[i].code + "' >" + result[i].name + "</option>");
+                    $('#citys').append("<option value='" + result[i].code + "' >" + result[i].name + "</option>");
                 }
             },
             error: function () {
@@ -279,9 +279,9 @@
         });
     } ;
     /*加载地区下拉选*/
-    function getArea() {
-        var id = $("#city_code").val();
-        $("#area_code").empty();
+    function getAreas() {
+        var id = $("#citys").val();
+        $("#areas").empty();
         $.ajax({
             type: "post",
             url: "/worker-console/queryAreaByCode",
@@ -289,9 +289,9 @@
             data: {"id": id},
             success: function (data) {
                 var result = eval('(' + data + ')');
-                $('#area_code').append("<option value='' selected='selected' >" + '请选择' + "</option>");
+                $('#areas').append("<option value='' selected='selected' >" + '请选择' + "</option>");
                 for (var i = 0; i < result.length; i++) {
-                    $('#area_code').append("<option value='" + result[i].code + "' >" + result[i].name + "</option>");
+                    $('#areas').append("<option value='" + result[i].code + "' >" + result[i].name + "</option>");
                 }
             },
             error: function () {
@@ -300,9 +300,9 @@
         });
     };
     function l() {
-        var procode=$('#province_code').find("option:selected").text();
-        var cityCode=$("#city_code").find("option:selected").text();
-        var areaCode=$('#area_code').find("option:selected").text();
+        var procode=$('#provinces').find("option:selected").text();
+        var cityCode=$("#citys").find("option:selected").text();
+        var areaCode=$('#areas').find("option:selected").text();
         var loc=procode+cityCode+areaCode;
         $.ajax({
             url: "/worker-console/edit-location",
