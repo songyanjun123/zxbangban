@@ -11,24 +11,11 @@
 <html>
 <head>
 	<title>信息中心 | 装修帮办服务平台</title>
-	<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />-->
 	<%@include file="common/head.jsp"%>
 </head>
 <body>
 <%@include file="common/header.jsp"%>
 <div class="page-wrapper"  style="background: #eee;">
-
-	<%--<div id="worker-search">--%>
-		<%--<div class="container">--%>
-			<%--<div class="jumbotron" id="worker-search-banner">--%>
-				<%--<h1>装修帮办</h1>--%>
-				<%--<span>我们的使命是予力每一位业主体验超凡。</span>--%>
-				<%--<div class="">--%>
-
-				<%--</div>--%>
-			<%--</div>--%>
-		<%--</div>--%>
-	<%--</div>--%>
 	<div class="container">
 		<div class="bbb worker">
 			<ul>
@@ -74,7 +61,7 @@
 				<li value="7">
 					<div>
 						<img src="http://bpic.588ku.com/element_origin_min_pic/16/07/17/16578b442687b37.jpg" alt="" /></div>
-					<p>油漆工</p>
+					<p>腻子工</p>
 				</li>
 			</ul>
 			<ul>
@@ -168,7 +155,7 @@
 			<ul>
 				<li value="1">
 					<div>
-						<img src="../../resources/images/worker/05.png" alt="设计师" />
+						<img src="../../resources/images/worker/07.png" alt="设计师" />
 					</div>
 				</li>
 				<li value="2">
