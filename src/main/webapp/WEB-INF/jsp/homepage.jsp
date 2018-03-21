@@ -314,38 +314,48 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-titile">
-                            工程订单案例:
+                            业主预约信息:
                         </h3>
                     </div>
                     <div class="panel-body">
                         <dl class="row">
-                            <dt class="col-md-2">业主</dt>
+                            <dt class="col-md-3">业主</dt>
                             <dt class="col-md-3">小区</dt>
-                            <dt class="col-md-2">面积</dt>
-                            <dt class="col-md-2">报价</dt>
+                            <dt class="col-md-3">手机号</dt>
                             <dt class="col-md-3">时间</dt>
 
-                            <dd class="col-md-2">阿萨德</dd>
-                            <dd class="col-md-3">幸福花园</dd>
-                            <dd class="col-md-2">100㎡</dd>
-                            <dd class="col-md-2">8-10万</dd>
-                            <dd class="col-md-3">2017/8-2018/7</dd>
-
-
-
-                            <dd class="col-md-2">阿萨德</dd>
-                            <dd class="col-md-3">幸福花园</dd>
-                            <dd class="col-md-2">100㎡</dd>
-                            <dd class="col-md-2">8-10万</dd>
-                            <dd class="col-md-3">2017/8-2018/7</dd>
-
-
-                            <dd class="col-md-2">阿萨德</dd>
-                            <dd class="col-md-3">幸福花园</dd>
-                            <dd class="col-md-2">100㎡</dd>
-                            <dd class="col-md-2">8-10万</dd>
-                            <dd class="col-md-3">2017/8-2018/7</dd>
-
+                            <c:forEach var="customer" items="${customers}">
+                                <c:set var="cust" scope="page" value="${customers}"></c:set>
+                                <dd class="col-md-3">${customer.name}</dd>
+                                <dd class="col-md-3">${customer.programAddress}</dd>
+                                <dd class="col-md-3" class="telphone">${customer.telphone.substring(0,3)}****${customer.telphone.substring(7,11)}</dd>
+                                <dd class="col-md-3">${customer.createTime.toLocaleString()}</dd>
+                            </c:forEach>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-titile">
+                            工程订单案例:
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="row" >
+                            <dt class="col-md-2">小区</dt>
+                            <dt class="col-md-2">面积</dt>
+                            <dt class="col-md-2">报价</dt>
+                            <dt class="col-md-2">施工方式</dt>
+                            <dt class="col-md-2">当前状态</dt>
+                            <dt class="col-md-2">时间</dt>
+                            <c:set var="workerDes" value="${workerinfo.projectDes.split(';')}"></c:set>
+                             <c:forEach var="info"  items="${workerDes}">
+                                 <dd class="col-md-2">${info}</dd>
+                             </c:forEach>
                         </dl>
                     </div>
                 </div>
@@ -380,9 +390,11 @@
             homepagestate.detail.c($wid);
         },3000);
         $("[data-toggle='tooltip']").tooltip();
+
     });
     $("#tellNum").click(function(){
         $("#mess").toggleClass("show");
-    })
+    });
+
 </script>
 </html>

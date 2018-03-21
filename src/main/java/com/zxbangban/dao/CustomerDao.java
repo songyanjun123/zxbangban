@@ -21,4 +21,5 @@ public interface CustomerDao {
      * @return int
      */
     int delete(long id);
+    List<Customer> queryByNotes(@Param("notes") String notes);
 }

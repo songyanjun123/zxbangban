@@ -299,21 +299,19 @@ public class WorkerServiceController {
 
     /*
     * 跳转至工人信息页面
-    *
+    *local,date,area,price,mode,state
     * */
     @RequestMapping(value = "saveDes",method = RequestMethod.POST)
-    public String saveDec(@RequestParam long wid,@RequestParam String project,@RequestParam String start,@RequestParam String end,@RequestParam String desc,Model model){
+    public String saveDec(@RequestParam long wid,@RequestParam String local,@RequestParam String start,@RequestParam String end,@RequestParam String area,@RequestParam String price
+            ,@RequestParam String mode,@RequestParam String state, Model model){
         try{
             WorkerInfo workerInfo = workerInfoService.queryDetailByWorkerId(wid);
             StringBuilder projectDes=new StringBuilder();
             String start1=start.replaceAll("-","/");
             String end1=end.replaceAll("-","/");
-            if (workerInfo.getProjectDes()==null) {
-                projectDes.append("<font size='5'><b>").append(project).append(":</b></font>").append(start1).append("-").append(end1).append(",").append(desc).append("<br/>");
-            }else {
-                projectDes.append("<font size='5'><b>").append(project).append(":</b></font>").append(start1).append("-").append(end1).append(",").append(desc).append("<br/>").append(workerInfo.getProjectDes());
-            }
-            int r=workerInfoService.saveDes(wid,projectDes.toString());
+            String date=start1+"-"+end1;
+            projectDes.append(local).append(";").append(area).append(";").append(price).append(";").append(mode).append(";").append(state).append(";").append(date).append(";");
+            int r=workerInfoService.saveDes(wid,workerInfo.getProjectDes()+projectDes.toString());
             return "redirect:/my-account/profile-workerinfo";
         }catch (Exception e){
             return "common/errorpage";
@@ -326,10 +324,13 @@ public class WorkerServiceController {
    * */
     @RequestMapping(value = "editDes",method = RequestMethod.POST)
     @ResponseBody
-    public String editDes(@RequestParam long wid,@RequestParam String projectDes,Model model){
+    public String editDes(@RequestParam long wid,@RequestParam String str,Model model){
         try{
-            workerInfoService.saveDes(wid,projectDes);
-            return "1";
+            WorkerInfo workerInfo=workerInfoService.queryWorkerByWorkerId(wid);
+            String projectDes=workerInfo.getProjectDes().replaceAll(str,"");
+            System.out.println(projectDes);
+            int i=workerInfoService.saveDes(wid,projectDes);
+            return String.valueOf(i);
         }catch (Exception e){
             return "common/errorpage";
         }
