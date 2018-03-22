@@ -106,14 +106,14 @@
 							</div>
 							<!--工地案例循环部分开始-->
 
-							<img src="http://image.haogongzhang.com/construction/cover/201712/5a2e02c07f32c.jpg!cons.thumb" width="220" height="165" alt="">
+							<img src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/bies/01/01_cant.jpg?x-oss-process=style/style" width="220" height="165" alt="">
 
-							<img src="http://image.haogongzhang.com/construction/cover/201712/5a2e02c07f32c.jpg!cons.thumb" width="220" height="165" alt="">
+							<img src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/bies/01/01_cant.jpg?x-oss-process=style/style" width="220" height="165" alt="">
 
 
-							<img src="http://image.haogongzhang.com/construction/cover/201712/5a2e02c07f32c.jpg!cons.thumb" width="220" height="165" alt="">
+							<img src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/bies/01/01_cant.jpg?x-oss-process=style/style" width="220" height="165" alt="">
 
-							<img src="http://image.haogongzhang.com/construction/cover/201712/5a2e02c07f32c.jpg!cons.thumb" width="220" height="165" alt="">
+							<img src="http://zxbangban.oss-cn-beijing.aliyuncs.com/effect/bies/01/01_cant.jpg?x-oss-process=style/style" width="220" height="165" alt="">
 
 							<!--工地案例循环部分开始-->
 						</motempty>

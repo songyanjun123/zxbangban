@@ -37,7 +37,7 @@
     width: 15px;
     height: 15px;
     vertical-align: middle;
-    background: url(../../resources/images/home/location.png) no-repeat;
+    background: url(http://zxbangban.oss-cn-beijing.aliyuncs.com/header/location.png) no-repeat;
     background-size: 100% 100%;
 }
 .top_nav .address > div span {
@@ -1434,12 +1434,13 @@ table{border-collapse:collapse;border-spacing:0}
     background: #fff;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    width: 100%;
+    width: 46%;
+    margin-right: 1rem;
   }
   .small_worker ul li div {
     display: inline-block;
-    width: 23rem;
-    height: 14rem;
+    width: 13rem;
+    height: 6rem;
   }
   .small_worker ul li div img {
     width: 100%;

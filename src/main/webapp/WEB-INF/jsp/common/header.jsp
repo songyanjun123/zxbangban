@@ -45,10 +45,10 @@
 					</div>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<div class="change_city">
-						<em style="display: inline-block;width: 15px;height: 15px; vertical-align: middle;background: url(../../../resources/images/home/tell.png) no-repeat;background-size: 100% 100%;"></em>
+						<em style="display: inline-block;width: 15px;height: 15px; vertical-align: middle;background: url(http://zxbangban.oss-cn-beijing.aliyuncs.com/header/tell.png) no-repeat;background-size: 100% 100%;"></em>
 						<span>联系我们</span>
 						<%--<a href="javascript:;">0355-8881777</a>--%>
-						<a href="tel:010-86466830">010-86466830</a>
+						<a href="tel:010-86466830">400-6550-830</a>
 					</div>
 				</div>
 				<div>
