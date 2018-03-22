@@ -31,4 +31,6 @@ public class CustomerServiceImpl implements CustomerService{
     public int delete(long id) {
         return customerDao.delete(id);
     }
+
+    public List<Customer> queryByNotes(String notes){return customerDao.queryByNotes(notes);};
 }

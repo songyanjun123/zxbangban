@@ -41,5 +41,15 @@
         WHERE id = #{id}
     </delete>
 
+    <select id="queryByNotes" parameterType="String" resultType="Customer">
+        SELECT
+            id,
+            name,
+            program_address,
+            telphone,
+            create_time
+        FROM customer WHERE notes = #{notes}
+        ORDER  BY  create_time DESC  LIMIT 0,4;
+    </select>
 
 </mapper>

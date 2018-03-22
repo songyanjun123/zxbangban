@@ -47,6 +47,15 @@
             width:100%;
 
         }
+        dd,dt{
+            font-size:17px;
+        }
+        dl{
+            border: 1px solid #ccc;
+        }
+        #clas{
+            border-bottom: hidden;
+        }
     </style>
 </head>
 <body>
@@ -66,7 +75,7 @@
         </div>
         <div class="row clearfix">
             <div class="col-md-12 column">
-                <div class="jumbotron">
+                <div class="jumbotron" style="padding-left: 0;padding-right: 0px">
                     <h2>你的信息</h2>
                     <ol class="nav nav-tabs">
                         <li><a href="${pageContext.request.contextPath}/my-account/profile">个人资料</a></li>
@@ -78,15 +87,15 @@
             </div>
             <c:set var="img" scope="page" value="${worker}"/>
             <c:if test="${img != null}">
-            <div class="col-md-4 col-sm-4 col-xs-12 column">
-                <div class="jumbotron">
+            <div class="col-md-2 col-sm-2 col-xs-12 column">
+                <div class="jumbotron" style="padding-left: 0;padding-right: 0px">
                     <h2><img src="${worker.headImgUrl}" class="img-circle img-responsive headimg"/></h2>
                         <span class="text-center">
                                 <button type="button" class="btn btn-link" onclick="ei(this)" value="${worker.workerId}">修改头像</button>
                             </span>
                 </div>
             </div>
-            <div class="col-md-8 col-sm-8 col-xs-12 column">
+            <div class="col-md-10 col-sm-10  col-xs-12 column">
                 <div class="jumbotron">
                     <div>
                         <h2 style="margin-bottom: 0">姓名：${worker.name}</h2>
@@ -101,23 +110,28 @@
                     </div>
                     <h2 style="margin-bottom: 0">工程描述:</h2><br/>
                     <div>
-                        <c:choose>
-                            <c:when test="${empty worker.projectDes}">
-                                <span style="font-size: 30px;border: 1px;height: auto;width: auto">暂无</span> <br>
-                                <a href="${pageContext.request.contextPath}/worker-console/addDec?wid=${worker.workerId}"   ><span style="font-size: 20px">添加</span></a>
-                            </c:when>
-                            <c:otherwise>
-                                    <span style="border: 1px;height: auto">
-                                        <div id="projectDes">
-                                              <span class="changeCon" style="font-size: 20px;border: 1px;height: auto;width: auto">${worker.projectDes}</span>
-                                        </div>
-                                        <button type="button"  class="btn btn-success changeBtn"  data-toggle="button"> 编辑</button>
-                                        <button type="button" class="btn btn-primary noneBtn">保存</button>
-                                        <a href="${pageContext.request.contextPath}/worker-console/addDec?wid=${worker.workerId}"   ><span style="font-size: 20px" class="btn btn-info">添加</span></a>
-
-                                    </span>
-                            </c:otherwise>
-                        </c:choose>
+                        <dl class="row" id="clas">
+                            <dt class="col-md-2">小区</dt>
+                            <dt class="col-md-1">面积</dt>
+                            <dt class="col-md-1">报价</dt>
+                            <dt class="col-md-2">施工方式</dt>
+                            <dt class="col-md-2">当前状态</dt>
+                            <dt class="col-md-3">时间</dt>
+                            <dt class="col-md-1">操作</dt>
+                            <c:set var="workerDes" value="${worker.projectDes.split(';')}"></c:set>
+                            <c:forEach var="info"  items="${workerDes}" varStatus="vs" step="6">
+                                <dt class="col-md-2" id="${vs.index}" name="${vs.index}">${workerDes[vs.index]}</dt>
+                                <dt class="col-md-1" id="${vs.index}" name="${vs.index}">${workerDes[vs.index+1]}</dt>
+                                <dt class="col-md-1" id="${vs.index}" name="${vs.index}">${workerDes[vs.index+2]}</dt>
+                                <dt class="col-md-2" id="${vs.index}" name="${vs.index}">${workerDes[vs.index+3]}</dt>
+                                <dt class="col-md-2" id="${vs.index}" name="${vs.index}">${workerDes[vs.index+4]}</dt>
+                                <dt class="col-md-3" id="${vs.index}" name="${vs.index}">${workerDes[vs.index+5]}</dt>
+                                <c:if test="${worker.projectDes!=''}">
+                                    <dt class="col-md-1"  id="${vs.index}"><button type="button" class="btn btn-default" onclick="editProject(this)">删除</button></dt>
+                                </c:if>
+                            </c:forEach>
+                        </dl>
+                        <a href="${pageContext.request.contextPath}/worker-console/addDec?wid=${worker.workerId}"   ><span style="font-size: 20px" class="btn btn-info">添加</span></a>
                     </div>
                     <h2 style="margin-bottom: 0">工程图片:</h2>
                     <c:choose>
@@ -154,47 +168,23 @@
 <%@include file="../common/script.jsp" %>
 <script type="text/javascript">
 
-    function ei(param) {
-        var $i = $(param);
-        var $flag = $($i).val();
-        $($($i).parent()).html("<div class=''>" +
-            "<form class='form' enctype='multipart/form-data' action='/my-account/editheadimg' method='post'>" +
-            "<input type='hidden' class='form-control' name='oldFile' value='${worker.headImgUrl}'>" +
-            "<div class='input-group'>" +
-            "<input type='file' class='form-control' name='file'>" +
-            "<span class='input-group-btn'><button type='submit' class='btn btn-default'>保存</button>" +
-            "</span>" +
-            "</div></form></div>");
-
+    function  editProject(param) {
+       var id= param.parentNode.id;
+       var eles=document.getElementsByName(id);
+       var  str = "";
+        for(i=0;i<eles.length;i++){
+            str += eles[i].innerHTML + ";";
+        }
+        $.ajax({
+            type:"POST",
+            url:"${pageContext.request.contextPath}/worker-console/editDes",
+            data:{str:str,wid:${worker.workerId}},
+            dataType:"json",
+            success:function(temp){
+                location.reload();
+            }
+        });
     }
-
-    $(function () {
-        $(".changeBtn").click(function(){
-            $(this).css("display","none");
-            $('.noneBtn').css("display","inline-block")
-            $('.changeCon').attr("contenteditable","true").css("border","1px solid #ccc");
-
-        })
-        $(".noneBtn").click(function(){
-            var projectDes=$(".changeCon").html();
-            $.ajax({
-                type:"POST",
-                url:"${pageContext.request.contextPath}/worker-console/editDes",
-                data:{projectDes:projectDes,wid:${worker.workerId}},
-                dataType:"json",
-                success:function(abc){
-                    if(abc=="1"){
-                        $(".noneBtn").css("display","none");
-                        $('.changeCon').attr("contenteditable","false").css("border","none");
-                        $(".changeBtn").css("display","inline-block");
-                    }else{
-                        alert("保存失败");
-                    }
-                }
-            });
-        })
-
-    })
 
     /*图片删除*/
     var imgLen = document.getElementById("imgLen").getElementsByTagName("div");

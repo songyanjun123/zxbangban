@@ -2,14 +2,8 @@ package com.zxbangban.web;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.zxbangban.entity.UserInfo;
-import com.zxbangban.entity.WorkerDetail;
-import com.zxbangban.entity.WorkerInfo;
-import com.zxbangban.entity.WorkerProfile;
-import com.zxbangban.service.AliyunMNService;
-import com.zxbangban.service.UserInfoService;
-import com.zxbangban.service.WorkerInfoService;
-import com.zxbangban.service.WorkerProfileService;
+import com.zxbangban.entity.*;
+import com.zxbangban.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -37,6 +31,9 @@ public class WorkerInfoController {
 
     @Autowired
     private UserInfoService userInfoService;
+
+    @Autowired
+    private CustomerService customerService;
 
     @RequestMapping(value = "/category")
     public String category(){
@@ -98,7 +95,11 @@ public class WorkerInfoController {
         }
         WorkerInfo workerInfo = workerInfoService.queryWorkerByWorkerId(workerid);
         WorkerProfile workerProfile = workerProfileService.queryByWorkerId(workerid);
+
         if(workerInfo != null){
+            String notes="预约[工号:" + workerid + ";姓名:"+workerInfo.getName() + "]";
+            List<Customer> customers=customerService.queryByNotes(notes);
+            model.addAttribute("customers",customers);
             model.addAttribute("workerinfo",workerInfo);
             model.addAttribute("workerProfile",workerProfile);
             return "homepage";
